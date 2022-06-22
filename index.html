@@ -38,6 +38,21 @@
                 letter-spacing: 2px;
             }
 
+            .contenedorMini{
+                    display:none;
+                    
+                }
+
+            @media (max-width: 1090px) {
+                .contenedor{
+                    display:none;
+                }
+                .contenedorMini{
+                    display:flex;
+ 
+                }
+            }
+
             .cambioTxt {
                 list-style: none;
                 padding-left: 10px;
@@ -85,7 +100,6 @@
                 .subtitulo{
                 font-size: 35px; 
                 }
-                
             }
 
         </style>
@@ -120,6 +134,9 @@
             <div style="margin-top: 20vh;">
                 <!-- Banner -->
                 <div class="row container m-auto mt-5">
+                    <div class="contenedorMini mx-auto text-white col">
+                        <h5 class="text-center mx-auto"><b>DiseñoWeb, MotionGraphics e Ilustración</b></h5>
+                    </div>
                     <div class="contenedor mx-auto text-white">
                         <ul class="cambioTxt text-center">
                             <li class="text-center"><h1><b>Diseño web</b></h1></li>
