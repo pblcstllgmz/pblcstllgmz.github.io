@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <title>Pablo Castelló - Diseño Gráfico</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+        <!-- Estilos -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300');
+            @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;800&family=Teko&display=swap');
+
+            h1, h2, h3{
+                font-family: 'Bitter', serif;
+
+            }
+
+            html, p, h4, h5{
+              font-family: 'Roboto', sans-serif;
+            }
+
+            .contenedor {
+                width: 100%;
+                height: 50px;
+                overflow: hidden;
+                font-size: 50px;
+                line-height: 50px;
+                letter-spacing: 2px;
+            }
+
+            .cambioTxt {
+                list-style: none;
+                padding-left: 10px;
+                opacity: 1;
+                animation: cambiar 15s infinite;
+            }
+
+            .cambioTxt {
+                margin: 0;
+            }
+
+            @keyframes cambiar {
+                
+                0%{ margin-top: 0;opacity: 1;}
+                15%{ margin-top: 0;opacity: 1;}
+                20%{ margin-top: 0;opacity: 0;}
+
+                21% {margin-top: -60px;opacity: 0;}
+                26% {margin-top: -60px;opacity: 1;}
+                40% {margin-top: -60px;opacity: 1;}
+                45% {margin-top: -60px;opacity: 0;}
+
+                46% {margin-top: -110px;opacity: 0;}
+                51% {margin-top: -110px;opacity: 1;}
+                66% {margin-top: -110px;opacity: 1;}
+                71% {margin-top: -110px;opacity: 0;}
+
+                72% {margin-top: -60px;opacity: 0;}
+                77% {margin-top: -60px;opacity: 1}
+                92% {margin-top: -60px;opacity: 1}
+                97% {margin-top: -60px;opacity: 0}
+
+                98% {margin-top: 0;opacity: 0}
+                100% {margin-top: 0;opacity: 1;}
+            }
+
+        </style>
+    </head>
+    <body>
+        
+
+        <!-- Section -->
+        <section class="p-3" style="background: linear-gradient(180deg, rgb(0, 145, 173) 0%, rgb(87, 52, 151) 35%, rgb(34, 34, 34) 80%);">
+            <!-- Nav -->
+            <nav class="navbar navbar-expand-lg rounded" >
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="/img/logo.gif" width="30" alt="">
+                    </a>
+                    <!-- Toggler -->
+                    <button class="navbar-toggler" style="border:0;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Menu -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-black" href="portfolio.html">Ver Portfolio</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Banner -->
+            <div class="row container mx-auto mt-5">
+                <div class="contenedor mx-auto text-white" style="">
+                        <ul class="cambioTxt text-center" style="">
+                            <li class="text-center"><h1><b>Diseño web</b></h1></li>
+                            <li class="text-center"><h1><b>MotionGraphics</b></h1></li>
+                            <li class="text-center"><h1><b>Ilustración</b></h1></li>
+                        </ul>
+              </div>
+            </div>
+
+            <div class="col-10 col-xl-8 mx-auto text-center text-white mt-3 mb-5">
+                <h2 style="font-size: 50px; letter-spacing: 2px;">
+                    Eleva tu empresa a un nuevo nivel aportándola de un valor añadido mediante el diseño gráfico.
+                </h2>
+            </div>
+
+            
+                
+        </section>
+
+        <!-- Section 1 -->
+        <section class="p-5 text-white" style="background-color: #222; ">
+            <div class="row container m-auto">
+                <div class="col-12 col-md-6 order-1 order-md-0" style="align-self: center;">
+                    <h6><small>HTML, CSS, Wordpress</small></h6>
+                    <h2 class="text-primary">Diseño web corporativo</h2>
+                    <p>Creación de páginas web, usando HTML y CSS o Wordpress. Adaptabilidad a framewoks, optimización AMP, Sliders y carruseles, animaciones CSS, GIFs animados con trasparencia,... En definitiva crear tu sitio web atractivo con una experiencia de usuario inmejorable.</p>
+                    <p>
+                        <a href="portfolio.html" class="btn btn-primary">Ver Portfolio</a>
+                        <a href="#" class="btn text-primary">Contactar</a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 order-0 order-md-1">
+                    <img src="/img/Free-T-shirt-Mock1.png" style="width:100%; " alt="">                
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="p-5 text-white" style="background-color: #222; ">
+            <div class="row container m-auto">
+                <div class="col-12 col-md-6 m-auto text-center">
+                    <img src="/img/Comp 4.gif" style="width:100%; max-width: 250px; margin: auto;" alt="">                
+                </div>
+                <div class="col-12 col-md-6" style="align-self: center;">
+                    <h6><small>After Effects, Premier, Photoshop,...</small></h6>
+                    <h2 class="text-primary">Edición de Video, Motion Graphics y Ilustración digital</h2>
+                    <p>Montaje, edición, etalonaje, y mucho más. 
+                        Creación de efectos especiales, entradillas de logotipos, animación de imágenes fijas. 
+                        Postproducción audiovisual completa.
+                    Ilustraciones digitales creadas desde cero, fijas o animadas. Manejo de distintos estilos como vectorial, modelado y esculpido 3D, pintura digital tradicional.</p>
+                    <p>
+                        <a href="portfolio.html" class="btn btn-primary">Ver Portfolio</a>
+                        <a href="#" class="btn text-primary">Contactar</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="p-5 text-white" style="background-color: #222; ">
+            <div class="row container m-auto">
+                <div class="col-12 col-md-6 order-1 order-md-0" style="align-self: center;">
+                    <h6><small>Diseño gráfico</small></h6>
+                    <h2 class="text-primary">Dirección de arte</h2>
+                    <p>Creación y adaptación de estilos gráficos para identidades corporativas. Diseño y rediseño de logotipos, material corporativo, maquetación de material impreso y digital. Análisis e investigación sobre cualquier proyecto gráfico.</p>
+                    <p>
+                        <a href="portfolio.html" class="btn btn-primary">Ver Portfolio</a>
+                        <a href="#" class="btn text-primary">Contactar</a>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 order-0 order-md-1">
+                    <img src="/img/Free-T-shirt-Mock1.png" style="width:100%; " alt="">                
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Clientes -->
+        <section class="p-5 text-center" style="background: linear-gradient(180deg, rgba(34,34,34,1) 10%, rgb(87, 52, 151) 55%, rgb(0, 145, 173) 100%);">
+            <p class="mt-5 pt-5 text-center text-light">
+                Clientes
+            </p>
+            <h5 class="text-center text-light mb-4">
+                Algunas empresas que contrataron mis servicios
+            </h5>
+            <div class="row container m-auto col-12 col-md-6 pb-3">
+                <div class="col-2 m-auto">
+                    <img src="/img/Warner_Bros_logo.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/nhHotelsBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/repsol-logo.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/logo_price_blanco_0.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-2  m-auto">
+                    <img src="/img/squadM.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/h28blanco.png" style="width:100%; " alt="">                
+                </div>
+            </div>    
+            <div class="row container m-auto col-12 col-md-6 pb-3">
+                <div class="col-2 m-auto">
+                    <img src="/img/uthorpLogoBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="https://www.wiccon.es/wp-content/uploads/2019/06/logoBlanco3.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/cervezaDamasBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/patriciaGarciaBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/pyconesBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-2 m-auto">
+                    <img src="/img/festivalHuelvaBlanco.png" style="width:100%; " alt="">               
+                </div>
+            </div>
+            <div class="row container m-auto col-12 col-md-6 pb-3 ">
+                <div class="col-2 m-auto">
+                    <img src="/img/goahBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-2  m-auto p-3">
+                    <img src="/img/logoClinicaDentalBlanco.png" style="width:100%; " alt="">                
+                </div>
+                
+                <div class="col-2 m-auto">
+                    <img src="/img/motivaBlanco.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-2 m-auto p-3 p-md-4">
+                    <img src="/img/escritorTatuado_logoPlano.png" style="width:100%; " alt="">                
+                </div>
+                
+                <div class="col-2 m-auto p-3 p-md-4">
+                    <img src="/img/SimboloBlanco.png" style="width:100%; " alt="">                
+                </div>
+
+                <div class="col-2 m-auto">
+                    <img src="/img/eyoileBlanco.png" style="width:100%; " alt="">                
+                </div>
+                
+                
+            </div>
+            <div>
+                <div class="row mt-5 container m-auto col-12 col-md-5">
+                    <div class="col-4 col-sm-3 col-md-4 my-auto ms-auto">
+                        <img src="/img/PCG.png" style="width:100%; max-width:105px; " alt="">                
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-8 my-auto me-auto text-start pb-3" style="border-left: solid 1px black;">
+                        <p class="mb-0 text-light">
+                                <b>Pablo Castelló</b> </br>
+                                Diseñador gráfico · 2022 </br>
+                                <a href="portfolio.html" class="btn btn-sm btn-dark mb-1">Ver Portfolio</a>
+                                <a href="#" class="btn btn-sm btn-dark mb-1">Contactar</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <p>
+                    
+                </p>
+            </div>
+        </section>
+
+        <!-- Bootstrap Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
