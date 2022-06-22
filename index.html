@@ -28,8 +28,10 @@
             }
 
             .contenedor {
-                width: 100%;
+                width: 600px;
                 height: 50px;
+                max-height: 50px;
+                min-height: 50px;
                 overflow: hidden;
                 font-size: 50px;
                 line-height: 50px;
@@ -40,36 +42,50 @@
                 list-style: none;
                 padding-left: 10px;
                 opacity: 1;
+                margin: 0;
                 animation: cambiar 15s infinite;
             }
 
-            .cambioTxt {
-                margin: 0;
-            }
-
             @keyframes cambiar {
-                
                 0%{ margin-top: 0;opacity: 1;}
                 15%{ margin-top: 0;opacity: 1;}
                 20%{ margin-top: 0;opacity: 0;}
-
                 21% {margin-top: -60px;opacity: 0;}
                 26% {margin-top: -60px;opacity: 1;}
                 40% {margin-top: -60px;opacity: 1;}
                 45% {margin-top: -60px;opacity: 0;}
-
                 46% {margin-top: -110px;opacity: 0;}
                 51% {margin-top: -110px;opacity: 1;}
                 66% {margin-top: -110px;opacity: 1;}
                 71% {margin-top: -110px;opacity: 0;}
-
                 72% {margin-top: -60px;opacity: 0;}
                 77% {margin-top: -60px;opacity: 1}
                 92% {margin-top: -60px;opacity: 1}
                 97% {margin-top: -60px;opacity: 0}
-
                 98% {margin-top: 0;opacity: 0}
                 100% {margin-top: 0;opacity: 1;}
+            }
+
+            .arrow-slide {
+                animation: slide 3s infinite ease-in-out;
+            }
+
+            @keyframes slide {
+                0%{ margin-top: 0;}
+                50% {margin-top: 20px;}
+                100% {margin-top: 0;}
+            }
+
+            .subtitulo{
+                font-size: 50px; 
+                letter-spacing: 2px;
+            }
+
+            @media (max-width: 600px) {
+                .subtitulo{
+                font-size: 35px; 
+                }
+                
             }
 
         </style>
@@ -78,7 +94,7 @@
         
 
         <!-- Section -->
-        <section class="p-3" style="background: linear-gradient(180deg, rgb(0, 145, 173) 0%, rgb(87, 52, 151) 35%, rgb(34, 34, 34) 80%);">
+        <section class="p-3" style="background: linear-gradient(180deg, rgb(0, 145, 173) 0%, rgb(87, 52, 151) 35%, rgb(34, 34, 34) 80%);height: 100vh;">
             <!-- Nav -->
             <nav class="navbar navbar-expand-lg rounded" >
                 <div class="container-fluid">
@@ -101,25 +117,28 @@
                     </div>
                 </div>
             </nav>
-
-            <!-- Banner -->
-            <div class="row container mx-auto mt-5">
-                <div class="contenedor mx-auto text-white" style="height: 100vh;">
-                        <ul class="cambioTxt text-center" style="">
+            <div style="margin-top: 20vh;">
+                <!-- Banner -->
+                <div class="row container m-auto mt-5">
+                    <div class="contenedor mx-auto text-white">
+                        <ul class="cambioTxt text-center">
                             <li class="text-center"><h1><b>Diseño web</b></h1></li>
                             <li class="text-center"><h1><b>MotionGraphics</b></h1></li>
                             <li class="text-center"><h1><b>Ilustración</b></h1></li>
                         </ul>
-              </div>
+                    </div>
+                </div>
+                <div class="col-10 col-xl-8 mx-auto text-center text-white mt-3 mb-5">
+                    <h2 class="subtitulo">
+                        Eleva tu empresa a un nuevo nivel aportándola de un valor añadido mediante el diseño gráfico.
+                    </h2>
+                    <div class="mx-auto arrow-slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
-
-            <div class="col-10 col-xl-8 mx-auto text-center text-white mt-3 mb-5">
-                <h2 style="font-size: 50px; letter-spacing: 2px;">
-                    Eleva tu empresa a un nuevo nivel aportándola de un valor añadido mediante el diseño gráfico.
-                </h2>
-            </div>
-
-            
                 
         </section>
 
