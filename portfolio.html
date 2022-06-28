@@ -252,6 +252,44 @@
             </div>
         </div>
 
+        <!-- contactoModal -->
+        <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
+            <div class="modal-dialog" >
+                <div class="modal-content px-4" style="background-color: rgba(255,255,255,0.9);backdrop-filter: blur(10px);border-bottom:2px solid rgb(172, 172, 172); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2); border-radius: 10px;">
+                    <div class="modal-header" style="border: 0;">
+                        <h5 class="modal-title text-secondary" id="contactoModalLabel">Contacto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4 py-0">
+                        <div>
+                            <a href="mailto:pblcstllgmz@gmail.com" class="btn btn-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                  </svg>
+                                pblcstllgmz@gmail.com
+                            </a>
+                            <a href="#" class="btn btn-dark">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                    <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                                  </svg>
+                               Discord
+                            </a>
+                        </div>
+                        <div class="card bg-danger my-3">
+                            <div class="card-body text-white">
+                                <h5>¡No enviar publicidad!</h5>
+                              <p class="card-text"><small>* Estas apunto de enviar un correo electrónico a una dirección de email que pertenece a la <a href="https://www.listarobinson.es/" target="_blank" class="text-dark"><b>Lista Robinson</b></a>. </small></p>
+                              
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer" style="border: 0;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Banner -->
         <section class="banner" style="padding-top: 60px; ">
             <div class="mx-auto container row">
@@ -2630,8 +2668,8 @@
         <!-- Footer -->
         <nav class="navbar fixed-bottom navbar-light p-3"  style="background: rgba(255,255,255,0.6);backdrop-filter: blur(5px); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.1);">
             <div class="container-fluid">
-              <p class="nav-item mb-1">Pablo Castelló</p>
-              <p class="nav-item ms-auto mb-1">2022</p>
+              <p class="nav-item mb-1"><a class="btn text-primary"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a></p>
+              <p class="nav-item ms-auto mb-1">Pablo Castelló 2022</p>
             </div>
         </nav>
 
