@@ -20,67 +20,12 @@
 
             h1, h2, h3{
                 font-family: 'Bitter', serif;
-
             }
 
             html, p, h4, h5{
               font-family: 'Roboto', sans-serif;
             }
-
-            .contenedor {
-                width: 600px;
-                height: 50px;
-                max-height: 50px;
-                min-height: 50px;
-                overflow: hidden;
-                font-size: 50px;
-                line-height: 50px;
-                letter-spacing: 2px;
-            }
-
-            .contenedorMini{
-                    display:none;
-                    
-                }
-
-            @media (max-width: 1090px) {
-                .contenedor{
-                    display:none;
-                }
-                .contenedorMini{
-                    display:flex;
- 
-                }
-            }
-
-            .cambioTxt {
-                list-style: none;
-                padding-left: 10px;
-                opacity: 1;
-                margin: 0;
-                animation: cambiar 15s infinite;
-            }
-
-            @keyframes cambiar {
-                0%{ margin-top: 0;opacity: 1;}
-                15%{ margin-top: 0;opacity: 1;}
-                20%{ margin-top: 0;opacity: 0;}
-                21% {margin-top: -60px;opacity: 0;}
-                26% {margin-top: -60px;opacity: 1;}
-                40% {margin-top: -60px;opacity: 1;}
-                45% {margin-top: -60px;opacity: 0;}
-                46% {margin-top: -110px;opacity: 0;}
-                51% {margin-top: -110px;opacity: 1;}
-                66% {margin-top: -110px;opacity: 1;}
-                71% {margin-top: -110px;opacity: 0;}
-                72% {margin-top: -60px;opacity: 0;}
-                77% {margin-top: -60px;opacity: 1}
-                92% {margin-top: -60px;opacity: 1}
-                97% {margin-top: -60px;opacity: 0}
-                98% {margin-top: 0;opacity: 0}
-                100% {margin-top: 0;opacity: 1;}
-            }
-
+            
             .arrow-slide {
                 animation: slide 3s infinite ease-in-out;
             }
@@ -172,27 +117,36 @@
 
             <!-- Banner -->
             <div class="" style="margin-top: 20vh;">
-                <div class="row container m-auto mt-5">
-                    <div class="contenedorMini mx-auto text-white col">
-                        <h5 class="text-center mx-auto"><b>DiseñoWeb, MotionGraphics e Ilustración</b></h5>
+                <div class="row text-white col-12 col-md-10 mx-auto" style="align-items: center;">
+                    <div class="col-6">
+                        <div class="row container mt-5 p-0">
+                            <div class="text-white col">
+                                <h5 class="">DiseñoWeb, MotionGraphics e Ilustración</h5>
+                            </div>
+                           
+                        </div>
+
+                        <h2 class="subtitulo">
+                           <b>Eleva tu imagen al siguiente nivel</b>  
+                        </h2>
+                        <p>
+                            <a href="portfolio.html" class="btn text-primary">Ver Portfolio</a>
+                            <a class="btn text-white"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a>
+    
+                        </p>
                     </div>
-                    <div class="contenedor mx-auto text-white">
-                        <ul class="cambioTxt text-center">
-                            <li class="text-center"><h1><b>Diseño web</b></h1></li>
-                            <li class="text-center"><h1><b>MotionGraphics</b></h1></li>
-                            <li class="text-center"><h1><b>Ilustración</b></h1></li>
-                        </ul>
+                    <div class="col-6">
+                        <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 10px;" autoplay muted loop>
+                            <source src="/img/pablo3d.mkv" type="video/mp4">
+                            Tu navegador no soporta este formato de video.
+                        </video>
                     </div>
                 </div>
-                <div class="col-10 col-xl-8 mx-auto text-center text-white mt-3 mb-5">
-                    <h2 class="subtitulo">
-                        Eleva tu empresa a un nuevo nivel aportándola de un valor añadido mediante el diseño gráfico.
-                    </h2>
-                    <p>
-                        <a href="portfolio.html" class="btn btn-primary">Ver Portfolio</a>
-                        <a class="btn btn-dark"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a>
 
-                    </p>
+                
+                <div class="col-10 col-xl-8 mx-auto text-center text-white mt-3 mb-5">
+                    
+                    
                     <div class="mx-auto arrow-slide">
                         <a href="#artDirection" class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
@@ -200,6 +154,8 @@
                         
                     </div>
                 </div>
+
+                
             </div>
                 
         </section>
