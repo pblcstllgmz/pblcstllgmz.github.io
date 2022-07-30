@@ -334,6 +334,52 @@
 
         <!-- Bootstrap Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        
+        <script>
+            const html = document.documentElement;
+            /*ID del canvas*/
+            const canvas = document.getElementById("hero-lightpass");
+            const context = canvas.getContext("2d");
+            /*Nº frames animacion*/
+            const frameCount = 148;
+            /*Ruta de las imagenes*/
+            const currentFrame = index => (
+            `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+            )
+
+            const preloadImages = () => {
+            for (let i = 1; i < frameCount; i++) {
+                const img = new Image();
+                img.src = currentFrame(i);
+            }
+            };
+
+            const img = new Image()
+            img.src = currentFrame(1);
+            /*Tamaño de las imagenes*/
+            canvas.width=1158;
+            canvas.height=770;
+            img.onload=function(){
+            context.drawImage(img, 0, 0);
+            }
+
+            const updateImage = index => {
+            img.src = currentFrame(index);
+            context.drawImage(img, 0, 0);
+            }
+
+            window.addEventListener('scroll', () => {  
+            const scrollTop = html.scrollTop;
+            const maxScrollTop = html.scrollHeight - window.innerHeight;
+            const scrollFraction = scrollTop / maxScrollTop;
+            const frameIndex = Math.min(
+                frameCount - 1,
+                Math.ceil(scrollFraction * frameCount)
+            );
+            
+            requestAnimationFrame(() => updateImage(frameIndex + 1))
+            });
+
+            preloadImages()
+        </script>
     </body>
 </html>
