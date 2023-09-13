@@ -11,93 +11,246 @@
         
         <title>Pablo Castelló - Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-        <link rel="stylesheet" href="style.css">
 
+        <!-- Estilos -->
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+            
+            html, p, h1, h2, h3, h4, h5{
+              font-family: 'Roboto', sans-serif;
+            }
+            .tachar {
+            position: relative;
+            font-family: 'Roboto Condensed', sans-serif;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            }
+
+            .tachar:before, span:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            top: 50%;
+            margin-top: -0.5px;
+            background: #000;
+            }
+
+            .tachar:before {
+            left: -2.5px;
+            }
+            .tachar:after {
+            right: 2.5px;
+            background: #000;
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+
+            .tachar:hover:before {
+            background: #000;
+            width: 100%;
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+            }
+
+            .tachar:hover:after {
+            background: transparent;
+            width: 100%;
+            transition: 0s;
+            }
+
+            .banner {
+                background: linear-gradient(322deg, #009c53, #5500c4, #009c53);
+                background-size: 200% 200%;
+
+                -webkit-animation: AnimationName 22s ease infinite;
+                -moz-animation: AnimationName 22s ease infinite;
+                -o-animation: AnimationName 22s ease infinite;
+                animation: AnimationName 22s ease infinite;
+            }
+
+            .bg-dark{
+                box-shadow: 0 0px 0px rgba(0,0,0,0);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .bg-dark:hover{
+                box-shadow: 0 8px 10px rgba(0,0,0,0.7);
+                margin-top: -5px;
+                margin-bottom: 5px;
+            }
+
+            @-webkit-keyframes AnimationName {
+                0%{background-position:7% 0%}
+                50%{background-position:94% 100%}
+                100%{background-position:7% 0%}
+            }
+            @-moz-keyframes AnimationName {
+                0%{background-position:7% 0%}
+                50%{background-position:94% 100%}
+                100%{background-position:7% 0%}
+            }
+            @-o-keyframes AnimationName {
+                0%{background-position:7% 0%}
+                50%{background-position:94% 100%}
+                100%{background-position:7% 0%}
+            }
+            @keyframes AnimationName {
+                0%{background-position:7% 0%}
+                50%{background-position:94% 100%}
+                100%{background-position:7% 0%}
+            }
+
+
+        </style>
     </head>
     <body>
         <!-- Nav -->
-        <nav class="navbar navbar-expand-lg rounded pe-0" style="z-index: 3;">
-            <div class="container-fluid pe-0">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top m-3 rounded" style="background: rgba(255,255,255,0.6);backdrop-filter: blur(5px);border-bottom:3px solid rgba(255,255,255,0.5); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);">
+            <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand mx-auto" href="index.html">
+                <a class="navbar-brand" href="index.html">
                     <img src="/img/logo.gif" width="30" alt="">
+                    <small class="ms-2 text-dark tachar"></small>
                 </a>
                 <!-- Toggler -->
-                <button class="navbar-toggler p-0" style="border:0;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                          </svg>
-                    </span>
+                <button class="navbar-toggler" style="border:0;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <!-- Menu -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
                         <li class="nav-item">
-                            <a class="nav-link text-primary text-center" href="portfolio.html">
-                                <span class="esp">Trabajos</span>
-                                <span class="eng">Works</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black text-center" href="index.html#about">
-                                <span class="esp">Sobre mí</span>
-                                <span class="eng">About</span>
-                            </a>
-                        </li>
-                        <li class="nav-item pe-2">
-                            <a class="nav-link text-black text-center" data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">
-                                <span class="esp">Contacto</span>
-                                <span class="eng">Contact</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mt-1 me-2 text-center" >
-                            
-                            <a class="btn btn-primary btn-sm" target="_blank" href="https://www.behance.net/pablocastello">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-behance" viewBox="0 0 16 16">
-                                    <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z"/>
-                                </svg>
-                            </a>
-                            <a class="btn btn-danger btn-sm" target="_blank" href="https://www.instagram.com/pblcstllgmz">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                                  </svg>
-                            </a>
-                            <a class="btn btn-dark btn-sm eng" target="_blank" href="CV-PabloCastelloGomez-EN2023.pdf">
-                                CV
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                                  </svg>
-                            </a>
-                            <a class="btn btn-dark btn-sm esp" target="_blank" href="CV-PabloCastelloGomez-ES2023.pdf">
-                                CV
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
-                                  </svg>
-                            </a>
-                            <!-- BTN ESPAÑOL -->
-                            <button id="esBtn"  class="btn btn-secondary btn-sm"
-                            onclick="tradESP()">
-                                <small>
-                                    ES
-                                </small>
-                            </button>
-                            <!-- BTN ENGLISH -->
-                            <button id="enBtn"  class="btn btn-secondary btn-sm"
-                            onclick="tradENG()">
-                                <small>
-                                    EN
-                                </small>    
-                            </button>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="#">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item dropdown me-2">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Proyectos
+                            </a>
+                        
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item disabled" href="#">Próximamente</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Proyecto1</a></li>-->
+                            </ul>
+                        </li>
+
+                        <li class="nav-item mt-1" style="">
+                            <a class="btn btn-secondary btn-sm"  data-bs-toggle="modal" data-bs-target="#cvModal"  href="#">CV2023</a>
+                        </li>
+                        
                     </ul>
                     
                 </div>
             </div>
         </nav>
+
+        <!-- cvModal -->
+        <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 990px;">
+                <div class="modal-content px-4" style="background-color: rgba(255,255,255,0.7);backdrop-filter: blur(10px);border-bottom:2px solid rgba(255,255,255,0.9); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2); border-radius: 10px;">
+                    <div class="modal-header" style="border: 0;">
+                        <h5 class="modal-title text-secondary" id="cvModalLabel">Currículum Vitae</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4 py-0">
+                        <div class="row">
+                            
+                            <div class="col-md-8 p-3 order-md-2 mb-3" style="background-color: white; border-radius: 8px; box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);">
+                                <small>
+                                <h6 class="text-secondary">Pablo Castelló</h6>
+                                <h3>DISEÑADOR GRÁFICO</h3> 
+                                <h5 class="text-primary">SOBRE MÍ</h5>
+                                <p>Diseñador gráfico de nacimiento pero diplomado en ello desde 2010, en la
+                                    Escuela de arte número diez (Madrid). Ejerciendo como tal desde antes de
+                                    2005 en trabajos esporádicos, formalicé mi carrera como diseñador en 2011,
+                                    dirigiendo la parte gráfica de “UP studio”. En 2019 pasé a formar parte del
+                                    equipo de Comercio Inteligente, como Director de Arte y Proyectos, y hasta la
+                                    actualidad dirigiendo el proyecto Uthorp.</p>
+                                <h5 class="text-primary">APTITUDES</h5>
+                                <p><b>Edición de Video & Motion Graphics.</b></br>
+                                    Montaje, Edición y Motions Graphics para cualquier clase de video.</p>
+                                <p><b>Creación de Páginas web con Wordpress.</b></br>
+                                    Manejo avanzado del framework, uso de plugins, edición personalizada.</p>
+                                <p><b>Creación de Páginas web con HTML / CSS.</b></br>
+                                    Escritura de código de marcación HTML y CSS, con o sin Bootstrap.</p>
+                                <p><b>Edición y fotomontaje de imágenes.</b></br>
+                                    Creación de imágenes fijas y móviles mediante softwares de Adobe.</p>
+                                <p><b>Ilustración digital.</b></br>
+                                    Capacidad de crear de diversos tipos de ilustración como vectorial, 3D,
+                                    fotorrealista, tradicional, etc.</p>
+                                <p><b>Maquetación digital e impresa.</b></br>
+                                    Creación y edición de material digital o impreso como libros, revistas, folletos,
+                                    flyers, carteles, material corporativo, etc.</p>
+                                <p><b>Identidad corportaiva.</b></br>
+                                    Creación de identidad corporativa, logotipos, isotipos, imagotipos... </p>
+                                </small>
+                            </div>
+
+                            <div class="col order-md-1">
+                                <div class="p-3 mb-3" style="background-color: white; border-radius: 8px; box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);">
+                                    <h6 class="text-primary">Títulos oficiales</h6>
+                                    <p><b>Diplomatura en Diseño Gráfico</b></br>
+                                        Escuela de Arte número diez - Madrid</p>
+                                    <p><b>Curso 600 horas Suite Adobe</b></br>
+                                        Escuela Learning - Madrid</p>
+                                </div>
+                                
+                                <div class="p-3 mb-3" style="background-color: white; border-radius: 8px; box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);">
+                                    <h6 class="text-primary">Títulos no oficiales</h6>
+                                    <p><b>Workshop “Bodies” Katy Couprie</b></br>
+                                        ISIA Urbino - Italia</p>
+                                    <p class="mb-0"><b>Cursos vía online</b></p>
+                                        <ul>
+                                            <li>Ilustración digital</li>
+                                            <li>Motion graphics</li>
+                                            <li>Tipografia y lettering</li>
+                                        </ul>
+                                </div>
+
+                                <div class="p-3 mb-3" style="background-color: white; border-radius: 8px; box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);">
+                                    <h6 class="text-primary">Software</h6>
+                                    <div class="w-100">
+                                        <label for="Photoshop">Adobe Photoshop</label>
+                                        <progress id="Photoshop" class="w-100" max="100" value="85"></progress>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="Photoshop">Adobe Illustrator</label>
+                                        <progress id="Photoshop" class="w-100" max="100" value="80"></progress>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="Photoshop">Adobe InDesign</label>
+                                        <progress id="Photoshop" class="w-100" max="100" value="60"></progress>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="Photoshop">Adobe After Effects</label>
+                                        <progress id="Photoshop" class="w-100" max="100" value="75"></progress>
+                                    </div>
+                                    <div class="w-100">
+                                        <label for="Photoshop">Adobe XD</label>
+                                        <progress id="Photoshop" class="w-100" max="100" value="70"></progress>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="modal-footer" style="border: 0;">
+                        <a type="button" class="btn btn-primary" href="CV-PabloCastelloGomez.pdf" target="_blank">Currículum completo</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- contactoModal -->
         <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
@@ -138,33 +291,22 @@
         </div>
 
         <!-- Banner -->
-        <section class="banner">
+        <section class="banner" style="padding-top: 60px; ">
             <div class="mx-auto container row">
                 <div class="col-12 col-md-6 p-4 pb-0" style="align-self: center;">
-                    <h1 class="text-white">
-                        <span class="esp">Diseñador gráfico</span>
-                        <span class="eng">Graphic designer</span> 
-                    </h1>
-                    <p class="text-white esp">
-                        Diplomado desde 2010, en la Escuela de arte número diez (Madrid). 
-                        Formalicé mi carrera como diseñador autónomo un año después. 
-                        En 2019 pasé a formar parte de un equipo como Director de Arte y Proyectos hasta la actualidad.
-                    </p>                 
-                    <p class="text-white eng">
-                        Degree in Graphic design at the Escuela de arte número diez (Madrid) since 2010. 
-                        I formalised my career as a freelance designer a year later. 
-                        In 2019 I became part of a team as Art and Project Director until today.
-                    </p>
+                    <h1 class="text-white">Diseñador gráfico</h1>
                     <div class="">
                         <img decoding="async" 
                         width="200" 
                         alt="" 
                         class="" 
                         src="/img/apps.png">
-                    </div> 
+                    </div>                    
+                    <p class="text-white">Diplomado desde 2010, en la Escuela de arte número diez (Madrid). Formalicé mi carrera como diseñador autónomo un año después. En 2019 pasé a formar parte de un equipo como Director de Arte y Proyectos hasta la actualidad.</p>
+                    
                 </div>
     
-                <div class="col-12 col-md-6 text-center py-3">
+                <div class="col-12 col-md-6 text-center">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators d-none" >
                           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -192,30 +334,29 @@
         </section>
         
         <!-- Portfolio -->
-        <section >
+        <section class="container p-5">
             <!-- Proyectos destacados -->
-            <div class="my-4">
-            <b class="esp">Trabajos destacados</b>
-            <b class="eng">Featured works</b>
+            <div class="mb-4">
+                <p type="button" class="btn"
+                    data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="Para ver trabajos más póngase en contacto">
+            <small>Trabajos destacados</small>
+            </p>
             </div>
             <div class="row">
                 <!-- Button trigger modal Uthorp -->
                 <div class="col-12 col-md-4 row m-0 mb-3" >
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#uthorpModal" 
-                        style=" cursor:pointer; background: url('https://uthorp.com/img/zen40.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('https://uthorp.com/img/zen40.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
+                           
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">Uthorp</h5>
-                            <p class="card-text mb-1">
-                                <span class="esp">Plataforma creada con código optimizado para buscadores.</span>
-                                <span class="eng">Platform built with search engine optimised code.</span> 
-                            </p>
+                            <p class="card-text mb-1">Plataforma creada con código optimizado para buscadores.</p>
                             <p style="line-height: 32px;">
                                 <small class="bg-light p-1 rounded text-dark">HTML&CSS</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Ilustración</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Ilustration</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">Ilustración</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
                             </p>
                         </div>
                     </div>
@@ -241,30 +382,16 @@
                                     <div class="row mb-5">
                                         
                                         <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                            <h5 class="text-light">
-                                                <b class="esp">Plataforma creada con código optimizado para buscadores</b>
-                                                <b class="eng">Platform built with search engine optimised code</b>
-                                            </h5>
-                                            <p class="esp">
+                                            <h5 class="text-light"><b>Plataforma creada con código optimizado para buscadores</b></h5>
+                                            <p>
                                                 Una plataforma para usuarios creada con código AMP,
                                                 WebComponents creados para optimizar las búsquedas en dispositivos móviles.
                                             </p>
-                                            <p class="eng">
-                                                A platform for users created with AMP code,
-                                                WebComponents created to optimise searches on mobile devices.
-                                            </p>
-                                            <p class="esp">
-                                                · CSS personalizado basado en Bootstrap</br>
+                                            <p> · CSS personalizado basado en Bootstrap</br>
                                                 · Ilustraciones vectoriales animadas personalizadas</br>
                                                 · Motion graphics</br>
                                                 · Edición de vídeo</br>
                                             </p> 
-                                            <p class="eng">
-                                                · Custom CSS based on Bootstrap</br>
-                                                · Custom animated vector illustrations</br>
-                                                · Motion graphics</br>
-                                                · Video editing</br>
-                                            </p>
                                             <div class="row col-8 col-md-8 mb-3 ms-2">
 
                                                 <div class="col-2 p-0">
@@ -303,53 +430,46 @@
                                                     src="/img/premier.png">
                                                 </div>
                                             </div>
-                                            <a type="button" class="btn btn-success mb-3" href="https://uthorp.com/" target="_blank">
-                                                <span class="esp">Visitar sitio</span> 
-                                                <span class="eng">Visit site</span> 
-                                            </a>
+                                            <a type="button" class="btn btn-success mb-3" href="https://uthorp.com/" target="_blank">Visitar sitio</a>
                                             
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/uthorp opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                               </video>
                                             
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-8 row mb-5 mx-auto">
                                         <h5 class="col-12 mb-5" style="text-align:center;">
-                                            <span class="esp">Edición de vídeo y Motion graphics</span> 
-                                            <span class="eng">Video editing and Motion graphics</span> 
-                                        </h5>
+                                            Edición de vídeo y Motion graphics</h5>
                                         <video width="640" class="p-0 mb-3" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" controls autoplay muted loop>
                                             <source src="/img/Promo Uthorp opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         <video width="640" class="p-0 mb-3" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(34, 9, 255); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/uthorpRRSSopt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         <video width="640" class="p-0 mb-3" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(34, 9, 255); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/Embajadoresopt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                     </div>
                                     <div class="col-12 col-md-8 row mb-5 mx-auto">
                                         <h5 class="col-12 mb-3" style="text-align:center;">
-                                            <span class="esp">Ilustraciones vectoriales</span> 
-                                            <span class="eng">Vector illustrations</span> 
-                                        </h5>
+                                            Ilustraciones vectoriales</h5>
                                         <div class="col-12 col-md-6 mx-auto">
-                                            <video width="640" class="p-0 mb-3" style="width: 100%; height: auto; border-radius: 10px;" autoplay muted loop>
+                                            <video width="640" class="p-0 mb-3 " style="width: 100%; height: auto; border-radius: 10px;" autoplay muted loop>
                                                 <source src="/img/RRSS3opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                         </div>
                                         <div class="col-12 col-md-6 mx-auto">
                                             <video width="640" class="p-0 mb-3 col-12 col-md-6 mx-auto" style="width: 100%; height: auto; border-radius: 10px;" autoplay muted loop>
                                                 <source src="/img/RRSS4opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                         </div>
                                         
@@ -363,14 +483,8 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <a type="button" class="btn btn-success" href="https://uthorp.com/" target="_blank">
-                                        <span class="esp">Visitar sitio</span>
-                                        <span class="eng">Visit site</span> 
-                                    </a>
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                        <span class="esp">Cerrar</span> 
-                                        <span class="eng">Close</span> 
-                                    </button>
+                                    <a type="button" class="btn btn-success" href="https://uthorp.com/" target="_blank">Visitar sitio</a>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -380,18 +494,13 @@
                 <!-- Button trigger modal Gouts -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#GoutsModal"
-                    style=" cursor:pointer; background: url('/img/gouts[02].jpg');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/gouts[02].jpg');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">Gouts</h5>
-                            <p class="card-text mb-1">
-                                <span class="esp">Creación de logotipo para marca de restauración.</span>
-                                <span class="eng">Creation of a logo for a restaurant brand.</span> 
-                            </p>
+                            <h5 class="card-title ">Gouts</h5>
+                            <p class="card-text mb-1">Creación de logotipo para marca de restauración.</p>
                             <p>
-                                <small class="bg-light p-1 rounded text-dark esp">IdentidadCorporativa</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Logotipo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">CorporateIdentity</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Logo</small>
+                                <small class="bg-light p-1 rounded text-dark">IdentidadCorporativa</small>
+                                <small class="bg-light p-1 rounded text-dark">Logotipo</small>
                             </p>
                         </div>
                     </div>
@@ -404,7 +513,7 @@
                                 <h5 class="modal-title text-dark" id="GoutsModalLabel">
                                      
                                     <small class="text-dark"></small></h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body text-dark">
                                 <div class="col-12 col-md-6 row mx-auto">
@@ -417,15 +526,11 @@
                                 <div class="row mb-5">
                                     
                                     <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                        <h5 class="text-dark">
-                                            <b class="esp">Creación de logotipo para marca de restauración</b>
-                                            <b class="eng">Creation of a logo for a restaurant brand</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-dark"><b>Creación de logotipo para marca de restauración</b></h5>
+                                        <p>
                                             Logotipo para restaurante con música en directo y temática francesa, hecho a partir de lettering creado manualmente y digitalizado mediante vectores.
                                         </p>
-                                        <p class="eng">
-                                            Logo for a restaurant with live music and French theme, made from lettering created manually and digitised using vectors.                                        </p>
+                                        
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
 
                                             <div class="col-2 p-0">
@@ -457,17 +562,12 @@
                                 
                                 <div class="row mb-5 px-5">
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-2">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Lettering manual
                                         </h5>
-                                        <h5 class="eng">
-                                            Handmade Lettering
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Basado en la retícula, los bocetos iniciales fueron creados manualmente siguiendo las reglas de pesos, dinamismo y ritmo del lettering tradicional.
                                         </p>
-                                        <p class="eng">
-                                            Based on the grid, the initial sketches were created manually following the rules of weights, dynamism and rhythm of traditional lettering.                                        </p>
                                     </div>
                                     
                                     <img decoding="async"
@@ -485,17 +585,11 @@
                                         src="/img/gouts-4.png">
 
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-1">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Vectorizado digital
                                         </h5>
-                                        <h5 class="eng">
-                                            Digital vectorisation
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Digitalización mediante vectores, redistribución de los espacios blancos, detallado de luces y sombras, brillos, etc.
-                                        </p>
-                                        <p class="eng">
-                                            Vector digitisation, redistribution of white spaces, detailing of lights and shadows, highlights, etc.
                                         </p>
                                     </div>
                                 </div>
@@ -528,10 +622,7 @@
                                 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                    <span class="esp">Cerrar</span> 
-                                    <span class="eng">Close</span> 
-                                </button>
+                                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -540,13 +631,10 @@
                 <!-- Button trigger modal Wiccon -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#wicconModal"
-                    style=" cursor:pointer; background: url('/img/wicconopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/wicconopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">Wiccon</h5>
-                            <p class="card-text mb-1">
-                                <span class="esp">Web corporativa para empresa de refomas y construcción.</span> 
-                                <span class="eng">Corporate website for a refurbishment and construction company.</span> 
-                            </p>
+                            <h5 class="card-title ">Wiccon</h5>
+                            <p class="card-text mb-1">Web corporativa para empresa de refomas y construcción.</p>
                             <p>
                                 <small class="bg-light p-1 rounded text-dark">Wordpress</small>
                                 <small class="bg-light p-1 rounded text-dark">CSS</small>
@@ -575,25 +663,15 @@
                                 <div class="row mb-5">
                                     
                                     <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                        <h5 class="text-primary">
-                                            <b class="esp">Web corporativa para empresa de refomas y construcción</b>
-                                            <b class="eng">Corporate website for a refurbishment and construction company</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-primary"><b>Web corporativa para empresa de refomas y construcción</b></h5>
+                                        <p>
                                             Una página web corporativa creada con Wordpress, personalizada con código CSS y adaptado a la línea visual del cliente.
                                         </p>
-                                        <p class="eng">
-                                            A corporate website created with Wordpress, customised with CSS code and adapted to the client's visual line.
-                                        </p>
-                                        <p class="esp">
+                                        <p>
                                             · Wordpress básico</br>
                                             · CSS personalizado</br>
                                             · Manejo de plugins premium</br>
-                                        </p> 
-                                        <p class="eng">
-                                            · Wordpress basic</br>
-                                            · Custom CSS</br>
-                                            · Management of premium plugins</br>
+                                            
                                         </p> 
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
 
@@ -620,16 +698,13 @@
                                             </div>
                                             
                                         </div>
-                                        <a type="button" class="btn btn-primary mt-4" href="https://www.wiccon.es/" target="_blank">
-                                            <span class="esp">Visitar sitio</span> 
-                                            <span class="eng">Visit site</span> 
-                                        </a>
+                                        <a type="button" class="btn btn-primary mt-4" href="https://www.wiccon.es/" target="_blank">Visitar sitio</a>
 
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/Wiccon opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -640,11 +715,8 @@
                                         <h5 class="">
                                             Wordpress & CSS
                                         </h5>
-                                        <p class="esp">
+                                        <p>
                                             Edición y configuración básica del framework, páginas legales, cookies, etc.
-                                        </p>
-                                        <p class="eng">
-                                            Basic editing and configuration of the framework, legal pages, cookies, etc.
                                         </p>
                                     </div>
                                     
@@ -665,33 +737,22 @@
                                         src="/img/sliderRevopt.webp">
 
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-1">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Plantillas y plugins
                                         </h5>
-                                        <h5 class="eng">
-                                            Templates and plugins
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Instalación y configuración de plantillas y plugins. Creación de contenido visual para la web como animaciones, fotomontajes, gráficos, etc.
                                         </p>
-                                        <p class="eng">
-                                            Installation and configuration of templates and plugins. Creation of visual content for the website such as animations, photomontages, graphics, etc.                                        </p>
                                     </div>
                                 </div>
                                   
                                 <div class="row mb-5 px-5">
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-2">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Estilos CSS personalizados
                                         </h5>
-                                        <h5 class="eng">
-                                            Custom CSS 
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Adaptación de elementos del framework a la línea estética corporativa de la empresa.
-                                        </p>
-                                        <p class="eng">
-                                            Adaptation of elements of the framework to the company's brand line.
                                         </p>
                                     </div>
                                     
@@ -706,14 +767,8 @@
                                 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <a type="button" class="btn btn-primary" href="https://www.wiccon.es/" target="_blank">
-                                    <span class="esp">Visitar sitio</span>
-                                    <span class="eng">Visit site</span> 
-                                </a>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                    <span class="esp">Cerrar</span>
-                                    <span class="eng">Close</span> 
-                                </button>
+                                <a type="button" class="btn btn-primary" href="https://www.wiccon.es/" target="_blank">Visitar sitio</a>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -722,19 +777,13 @@
                 <!-- Button trigger modal NH -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#nhModal"
-                    style=" cursor:pointer; background: url('/img/nhBGopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/nhBGopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">NH Hotel Group</h5>
-                            <p class="card-text mb-1">
-                                <span class="esp">Videos corporativos de los hoteles de la marca.</span>
-                                <span class="eng">Corporate videos of the brand's hotels.</span> 
-                                
-                            </p>
+                            <h5 class="card-title ">NH Hotel Group</h5>
+                            <p class="card-text mb-1">Videos corporativos de los hoteles de la marca.</p>
                             <p>
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark esp">EdiciónVideo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
-                                <small class="bg-light p-1 rounded text-dark eng">EditingVideo</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">EdiciónVideo</small>
                             </p>
                         </div>
                     </div>
@@ -760,16 +809,11 @@
                                 <div class="row mb-5">
                                     
                                     <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                        <h5 class="text-white">
-                                            <b class="esp">Videos corporativos de los hoteles de la marca</b>
-                                            <b class="eng">Corporate videos of the brand's hotels</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-white"><b>Videos corporativos de los hoteles de la marca</b></h5>
+                                        <p>
                                             Creación de diversos videos corporativos a partir de material de archivo de la marca, Edición y animación de grafismos, efectos especiales, etc.
                                         </p>
-                                        <p class="eng">
-                                            Creation of various corporate videos from brand archive material. Editing and animation of graphics, special effects, etc.
-                                        </p>
+                                        
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
 
                                             <div class="col-2 p-0">
@@ -800,7 +844,7 @@
                                     <div class="col-12 col-md-6">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(11, 9, 175); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop controls>
                                             <source src="/img/NHH_BRAND_VIDEO_2018_V.ALFA_opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -811,17 +855,14 @@
                                         <h5 class="">
                                             Motion graphics
                                         </h5>
-                                        <p class="esp">
+                                        <p>
                                             Letreros animados, efectos simulados de movimientos, desenfoque, etalonaje, etc.
-                                        </p>
-                                        <p class="eng">
-                                            Animated signs, simulated motion effects, blurring, colour grading, etc.
                                         </p>
                                     </div>
                                     <div class="col-12 col-md-6 mx-auto p-0 order-2 order-sm-1">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(11, 9, 175); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/NH_1opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -833,30 +874,24 @@
                                     <div class="col-12 col-md-6 mx-auto mb-5 p-0 order-2 order-sm-2">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(11, 9, 175); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/NH_2 opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
 
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-1">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Efectos especiales
                                         </h5>
-                                        <h5 class="eng">
-                                            Special effects
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Creación de efectos de imagen, creación de objetos 3D, simulación de partículas, lens flares,etc.
-                                        </p>
-                                        <p class="eng">
-                                            Creation of image effects, creation of 3D objects, particle simulation, lens flares, etc.
                                         </p>
                                     </div>
 
                                     <div class="col-12 col-md-6 mx-auto mb-3 order-3 order-sm-3">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(11, 9, 175); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/planeta1 opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -864,7 +899,7 @@
                                     <div class="col-12 col-md-6 mx-auto mb-3 order-4 order-sm-4">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(11, 9, 175); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/planeta2 opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -872,7 +907,7 @@
                                     <div class="col-12 col-md-6 mx-auto mb-3 order-4 order-sm-5">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(11, 9, 175); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/CIERRE A.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -881,14 +916,8 @@
 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <a type="button" class="btn btn-success" href="https://youtu.be/GJrZB9HGinE" target="_blank">
-                                    <span class="esp">Ver en Youtube</span> 
-                                    <span class="eng">Wacth on Youtube</span> 
-                                </a>
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-                                    <span class="esp">Cerrar</span> 
-                                    <span class="eng">Close</span> 
-                                </button>
+                                <a type="button" class="btn btn-success" href="https://youtu.be/GJrZB9HGinE" target="_blank">Ver en Youtube</a>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -897,17 +926,13 @@
                 <!-- Button trigger modal PG -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#pgModal"
-                    style=" cursor:pointer; background: url('/img/patriciaGarcia2.png');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/patriciaGarcia2.png');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">Patricia Garcia Jewelry</h5>
-                            <p class="card-text mb-1">
-                                <span class="esp">Tienda online de joyería artesanal.</span> 
-                                <span class="eng">Online shop for handmade jewellery.</span> 
-                            </p>
+                            <h5 class="card-title ">Patricia Garcia Jewelry</h5>
+                            <p class="card-text mb-1">Tienda online de joyeria artesanal.</p>
                             <p>
                                 <small class="bg-light p-1 rounded text-dark">Wordpress</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Fotografía</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Photography</small>
+                                <small class="bg-light p-1 rounded text-dark">Fotografía</small>
                             </p>
                         </div>
                     </div>
@@ -933,29 +958,18 @@
                                 <div class="row mb-5">
                                     
                                     <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                        <h5 class="text-dark">
-                                            <b class="esp">Tienda online de joyeria artesanal</b>
-                                            <b class="eng">Handmade jewellery online shop</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-dark"><b>Tienda online de joyeria artesanal</b></h5>
+                                        <p>
                                             Tienda online corporativa creada con Wordpress, personalizada con código CSS y adaptado a la línea visual del cliente.
                                         </p>
-                                        <p class="eng">
-                                            Corporate online shop created with Wordpress, customised with CSS code and adapted to the client's visual line.                                        </p>
-                                        <p class="esp">
+                                        <p>
                                             · Configuración de tienda online y Wordpress</br>
                                             · CSS personalizado</br>
                                             · Manejo de plugins premium</br>
                                             · Fotografía de producto y modelaje</br>
                                             · Diseño de colecciones de joyería</br>
+                                            
                                         </p> 
-                                        <p class="eng">
-                                            · Online shop and Wordpress configuration</br>
-                                            · Custom CSS</br>
-                                            · Management of premium plugins</br>
-                                            · Product photography and modelling</br>
-                                            · Design of jewellery collections</br>
-                                        </p>
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
 
                                             <div class="col-2 p-0">
@@ -981,16 +995,13 @@
                                             </div>
                                             
                                         </div>
-                                        <a type="button" class="btn btn-primary mt-3" href="https://patriciagarcia.es/" target="_blank">
-                                            <span class="esp">Visitar sitio</span> 
-                                            <span class="eng">Visit site</span> 
-                                        </a>
+                                        <a type="button" class="btn btn-primary mt-3" href="https://patriciagarcia.es/" target="_blank">Visitar sitio</a>
                                     </div>
 
                                     <div class="col-12 col-md-6">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/PatriciaGarcia opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -1001,11 +1012,8 @@
                                         <h5 class="">
                                             Wordpress & Woocommerce
                                         </h5>
-                                        <p class="esp">
+                                        <p>
                                             Edición y configuración básica del framework y de la tienda online (WooCommerce), categorías, secciones, páginas legales, cookies, etc.
-                                        </p>
-                                        <p class="eng">
-                                            Editing and basic configuration of the framework and the online shop (WooCommerce), categories, sections, legal pages, cookies, etc.
                                         </p>
                                     </div>
                                     
@@ -1026,34 +1034,22 @@
                                         src="/img/coleccion.png">
 
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-1">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Diseño de colecciones
                                         </h5>
-                                        <h5 class="eng">
-                                            Collection design
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Diseño de la imagen corporativa de las diferentes colecciones de joyería. Imagen corporativa, fotografía, maquetación.
-                                        </p>
-                                        <p class="eng">
-                                            Design of the corporate image of the different jewellery collections. Corporate image, photography, layout.
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="row mb-5 px-5">
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-2">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Fotografía
                                         </h5>
-                                        <h5 class="eng">
-                                            Photography
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Fotografía de producto y fotografía con modelo en estudio. Iluminación de escena, retoque fotográfico, fotomontaje, ilustración, etc.
-                                        </p>
-                                        <p class="eng">
-                                            Product photography and photography with model in studio. Scene lighting, photo retouching, photomontage, illustration, etc.
                                         </p>
                                     </div>
                                     
@@ -1090,14 +1086,8 @@
 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <a type="button" class="btn btn-primary" href="https://patriciagarcia.es/" target="_blank">
-                                    <span class="esp">Visitar sitio</span> 
-                                    <span class="eng">Visit site</span> 
-                                </a>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                    <span class="esp">Cerrar</span> 
-                                    <span class="eng">Close</span>
-                                </button>
+                                <a type="button" class="btn btn-primary" href="https://patriciagarcia.es/" target="_blank">Visitar sitio</a>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -1106,16 +1096,13 @@
                 <!-- Button trigger modal LGFE -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#LGFEModal"
-                    style=" cursor:pointer; background: url('/img/LGFE.jpg');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/LGFE.jpg');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">La Gran Familia Española</h5>
-                            <p class="card-text mb-1 esp">Publicidad completa para medios.</p>
-                            <p class="card-text mb-1 eng">Full media advertising.</p>
+                            <h5 class="card-title ">La Gran Familia Española</h5>
+                            <p class="card-text mb-1">Publicidad completa para medios.</p>
                             <p>
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark esp">EdiciónVideo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
-                                <small class="bg-light p-1 rounded text-dark eng">EditingVideo</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">EdiciónVideo</small>
                             </p>
                         </div>
                     </div>
@@ -1141,28 +1128,18 @@
                                 <div class="row mb-5">
                                     
                                     <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                        <h5 class="text-dark">
-                                            <b class="esp">Publicidad completa para medios</b>
-                                            <b class="eng">Full media advertising</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-dark"><b>Publicidad completa para medios</b></h5>
+                                        <p>
                                             Creación de los distintos formatos para los diversos medios de publicidad, y entrevistas a los intengrantes del film para radio, prensa, canales Youtube, etc.
                                         </p>
-                                        <p class="eng">
-                                            Creation of the different formats for the various advertising media, and interviews with the film's participants for radio, press, Youtube channels, etc.                                        </p>
-                                        <p class="esp">
+                                        <p>
                                             · Contratación del personal de grabación de video y sonido</br>
                                             · Alquiler del equipo de grabación y luces</br>
                                             · Grabación de todos los anuncios y entrevistas</br>
                                             · Edición de todo el material</br>
                                             · Creación del logotipo animado</br>
-                                        </p> 
-                                        <p class="eng">
-                                            · Recruitment of video and sound recording personnel</br>
-                                            · Rental of recording equipment and lights</br>
-                                            · Recording of all announcements and interviews</br>
-                                            · Editing of all material</br>
-                                            · Creation of the animated logo</br>
+
+                                            
                                         </p> 
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
 
@@ -1194,7 +1171,7 @@
                                     <div class="col-12 col-md-6">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(255, 40, 40); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                             <source src="/img/Logo de entrada_ LGFE.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
@@ -1202,17 +1179,11 @@
 
                                 <div class="row mb-5 px-5">
                                     <div class="col-12 col-md-6 mx-auto ps-md-5 my-auto order-1 order-sm-2">
-                                        <h5 class="esp">
+                                        <h5 class="">
                                             Edición masiva de material
                                         </h5>
-                                        <h5 class="eng">
-                                            Mass editing of material
-                                        </h5>
-                                        <p class="esp">
+                                        <p>
                                             Edición de gran cantidad de material para difusión de la película, preparación de sets de grabación, producción y edición para diferentes medios de cominicación.
-                                        </p>
-                                        <p class="eng">
-                                            Editing of a large amount of material for the dissemination of the film, preparation of film sets, production and editing for different media.
                                         </p>
                                     </div>
                                     
@@ -1228,15 +1199,8 @@
 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <a type="button" class="btn btn-danger" href="https://youtu.be/6R244d11C_k" target="_blank">
-                                    
-                                    <span class="esp">Ver ejemplo de entrevista</span>
-                                    <span class="eng">See sample interview</span>
-                                </a>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                    <span class="esp">Cerrar</span>
-                                    <span class="eng">Close</span>
-                                </button>
+                                <a type="button" class="btn btn-danger" href="https://youtu.be/6R244d11C_k" target="_blank">Ver ejemplo de entrevista</a>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -1245,16 +1209,13 @@
                 <!-- Button trigger modal SquadM -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#SquadMModal"
-                    style=" cursor:pointer; background: url('/img/WeloveRemember2opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/WeloveRemember2opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">Squad Music</h5>
-                            <p class="card-text mb-1 esp">Creación de diversas carátulas para CD´s recopilatorios.</p>
-                            <p class="card-text mb-1 eng">Creation of various covers for compilation CDs.</p>
+                            <h5 class="card-title ">Squad Music</h5>
+                            <p class="card-text mb-1">Creación de diversas carátulas para CD´s recopilatorios.</p>
                             <p>
-                                <small class="bg-light p-1 rounded text-dark esp">Fotomontaje</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Maquetación</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Photomontage</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Layout</small>
+                                <small class="bg-light p-1 rounded text-dark">Fotomontaje</small>
+                                <small class="bg-light p-1 rounded text-dark">Maquetación</small>
                             </p>
                         </div>
                     </div>
@@ -1280,16 +1241,11 @@
                                 <div class="row mb-5">
                                     
                                     <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                        <h5 class="text-light">
-                                            <b class="esp">Creación de diversas carátulas para CD´s recopilatorios</b>
-                                            <b class="eng">Creation of various covers for compilation CDs</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-light"><b>Creación de diversas carátulas para CD´s recopilatorios</b></h5>
+                                        <p>
                                             Diversas creatividades y fotomontajes para portadas de recopilatorios musicales para el sello Squad Music.
                                         </p>
-                                        <p class="eng">
-                                            Various creativities and photomontages for music compilation covers for the Squad Music label.
-                                        </p>
+                                       
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
                                             <div class="col-2 p-0">
                                                 <img decoding="async" 
@@ -1339,10 +1295,7 @@
 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">
-                                    <span class="esp">Cerrar</span> 
-                                    <span class="eng">Close</span> 
-                                </button>
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -1351,16 +1304,13 @@
                 <!-- Button trigger modal h28 -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#h28Modal"
-                    style=" cursor:pointer; background: url('/img/h28-4opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/h28-4opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">Habitación28</h5>
-                            <p class="card-text mb-1 esp">Creación de logotipo para marca moda.</p>
-                            <p class="card-text mb-1 eng">Creation of a logo for a fashion brand.</p>
+                            <h5 class="card-title ">Habitación28</h5>
+                            <p class="card-text mb-1">Creación de logotipo para marca moda.</p>
                             <p>
-                                <small class="bg-light p-1 rounded text-dark esp">IdentidadCorporativa</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Logotipo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">CorporateIdentity</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Logo</small>
+                                <small class="bg-light p-1 rounded text-dark">IdentidadCorporativa</small>
+                                <small class="bg-light p-1 rounded text-dark">Logotipo</small>
                             </p>
                         </div>
                     </div>
@@ -1373,7 +1323,7 @@
                                 <h5 class="modal-title text-white" id="h28ModalLabel">
                                      
                                     <small class="text-dark"></small></h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body text-white">
                                 <div class="col-12 col-md-3 row mx-auto mb-5">
@@ -1386,16 +1336,11 @@
                                 <div class="row mb-5">
                                     
                                     <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
-                                        <h5 class="text-white">
-                                            <b class="esp">Creación de logotipo para marca moda</b>
-                                            <b class="eng">Creation of a logo for a fashion brand</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-white"><b>Creación de logotipo para marca moda</b></h5>
+                                        <p>
                                             Logotipo para marca de moda, basado en la simplicidad, minimalismo, modernidad.
                                         </p>
-                                        <p class="eng">
-                                            Logo for fashion brand, based on simplicity, minimalism, modernity.
-                                        </p>
+                                        
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
 
                                             <div class="col-2 p-0">
@@ -1455,10 +1400,7 @@
                                 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">
-                                   <span class="esp">Cerrar</span> 
-                                   <span class="eng">Close</span> 
-                                </button>
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -1467,14 +1409,13 @@
                 <!-- Button trigger modal damas -->
                 <div class="col-12 col-md-4 row m-0 mb-3">
                     <div class=" card bg-dark text-white p5" data-bs-toggle="modal" data-bs-target="#damasModal"
-                    style=" cursor:pointer; background: url('/img/Proydamas-1opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                    style="border-radius:10px; cursor:pointer; background: url('/img/Proydamas-1opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title">Proyecto Damas</h5>
-                            <p class="card-text mb-1 esp">Póster promocional corporativo para marca de cerveza artesanal.</p>
-                            <p class="card-text mb-1 eng">Corporate promotional poster for craft beer brand.</p>
+                            <h5 class="card-title ">Proyecto Damas</h5>
+                            <p class="card-text mb-1">Póster promocional corporativo para marca de cerveza artesanal.</p>
                             <p>
                                 <small class="bg-light p-1 rounded text-dark">3D</small>
-                                <small class="bg-light p-1 rounded text-dark">Poster</small>
+                                <small class="bg-light p-1 rounded text-dark">Póster</small>
                             </p>
                         </div>
                     </div>
@@ -1487,13 +1428,13 @@
                                 <h5 class="modal-title text-white" id="damasModalLabel">
                                      
                                     <small class="text-dark"></small></h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close" ></button>
                             </div>
                             <div class="modal-body text-white">
                                 
                                 <div class="row mb-5">
                                     
-                                    <div class="col-12 col-md-6 ps-md-5" style="align-self: center;">
+                                    <div class="col-12 col-md-6 ps-md-5" style="align-self: center; ">
                                         <div class="col-8 col-md-4 row mb-3 px-2 py-3" style="background-color: white; border-radius: 50%; overflow: hidden;">
                                             <img decoding="async" 
                                             width="250" 
@@ -1501,28 +1442,18 @@
                                             class="" 
                                             src="/img/damas.png">
                                         </div>
-                                        <h5 class="text-white">
-                                            <b class="esp">Proyecto Damas cerveza artesanal</b>
-                                            <b class="eng">Proyecto Damas craft beer</b>
-                                        </h5>
-                                        <p class="esp">
+                                        <h5 class="text-white"><b>Proyecto Damas cerveza artesanal</b></h5>
+                                        <p>
                                             Creación de cartel corporativo para la marca, hecho por completo en 3D con el software blender, y retocado con Photoshop.
                                         </p>
-                                        <p class="eng">
-                                            Creation of a corporate poster for the brand, made entirely in 3D with blender software, and retouched with Photoshop.
-                                        </p>
-                                        <p class="esp">
+                                        <p>
                                             · Modelado, esculpido y texturizado</br>
                                             · Lettering personalizado</br>
                                             · Materiales surface scattering</br>
                                             · Retoque, lens flares, chromatic aberration, grano imagen</br>
+                                            
                                         </p>
-                                        <p class="eng">
-                                            · Modelling, sculpting and texturing</br>
-                                            · Customised lettering</br>
-                                            · Materials surface scattering</br>
-                                            · Retoque, destellos de lente, aberración cromática, grano imagen</br>
-                                        </p>
+
                                         <div class="row col-8 col-md-8 mb-3 ms-2">
 
                                             <div class="col-2 p-0">
@@ -1582,10 +1513,7 @@
                                 
                             </div>
                             <div class="modal-footer" style="border: 0;">
-                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">
-                                   <span class="esp">Cerrar</span> 
-                                   <span class="eng">Close</span> 
-                                </button>
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cerrar</button>
                             </div>
                         </div>
                     </div>
@@ -1596,22 +1524,18 @@
 
             <!-- Colaboraciones y pequeños proyectos -->
             <div class="my-4">
-                <p>
-                    <small class="text-secondary esp">Colaboraciones y pequeños trabajos</small>
-                    <small class="text-secondary eng">Collaborations and small jobs</small>
-                </p>
+                <p><small class="text-secondary">Colaboraciones y pequeños trabajos</small></p>
             </div>
             <div class="row">
                 <!-- Button trigger modal DondeInvertir -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#dondeinvertirModal" 
-                        style=" cursor:pointer; background: url('/img/dondeinvertirHome.png');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/dondeinvertirHome.png');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">DondeInvertir.eu</h5>
-                            <p class="card-text mb-1 esp">Blog de Inversión y Cryptomendas.</p>
-                            <p class="card-text mb-1 eng">Investment and Cryptomarketing Blog.</p>
+                            <p class="card-text mb-1">Blog de Inversión y Cryptomendas.</p>
                             <p style="line-height: 32px;">
                                 <small class="bg-light p-1 rounded text-dark">3D</small>
                                 <small class="bg-light p-1 rounded text-dark">HTML&CSS</small>
@@ -1633,26 +1557,14 @@
                                     <div class="row mb-5">
                                     
                                         <div class="col-12 col-md-6 ps-md-5 mb-3" style="align-self: center;">
-                                            <h5 class="text-primary">
-                                                <b class="esp">Blog de Inversión y Cryptomendas</b>
-                                                <b class="eng">Investment and Cryptomarketing Blog</b>
-                                            </h5>
-                                            <p class="esp">
+                                            <h5 class="text-primary"><b>Blog de Inversión y Cryptomendas</b></h5>
+                                            <p>
                                                 Una web que muestra algunos consejos para invertir de manera segura y obtener buenos rendimientos.
                                             </p>
-                                            <p class="eng">
-                                                A website that shows some tips on how to invest safely and get good returns.
-                                            </p>
-                                            <p class="esp">
+                                            <p>
                                                 · Creación de animaciones 3D</br>
                                                 · HTML y CSS personalizado</br>
                                                 · Optimización del Test LightHouse</br>
-                                                
-                                            </p>
-                                            <p class="eng">
-                                                · Creation of 3D animations</br>
-                                                · Custom HTML and CSS</br>
-                                                · Optimisation of the LightHouse Test</br>
                                                 
                                             </p> 
                                             <div class="row col-8 col-md-8 mb-3 ms-2">
@@ -1680,15 +1592,12 @@
                                                 </div>
                                                 
                                             </div>
-                                            <a type="button" class="btn btn-primary mt-4" href="https://dondeinvertir.eu/" target="_blank">
-                                               <span class="esp">Visitar sitio</span>
-                                               <span class="eng">Visit site</span> 
-                                            </a>
+                                            <a type="button" class="btn btn-primary mt-4" href="https://dondeinvertir.eu/" target="_blank">Visitar sitio</a>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/Donde invertir.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
@@ -1698,19 +1607,16 @@
                                     <div class="row mb-5 px-5">
                                         <video width="500" class="responsive col-12 col-md-6" autoplay muted loop>
                                             <source src="/img/mobileSecurity.webm" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         <video width="500" class="responsive col-12 col-md-6" autoplay muted loop>
                                             <source src="/img/block.webm" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                     </div>  
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span>
-                                       <span class="eng">Close</span>
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -1720,18 +1626,15 @@
                 <!-- Button trigger modal OF -->
                 <div class="col-12 col-md-3 row m-0 mb-3" >
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#ofModal" 
-                        style=" cursor:pointer; background: url('/img/onlyFood\ opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/onlyFood\ opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">Onlyfood</h5>
-                            <p class="card-text mb-1 esp">Empresa de reparto de comida a domicilio.</p>
-                            <p class="card-text mb-1 eng">Food delivery company.</p>
+                            <p class="card-text mb-1">Empresa de reparto de comida a domicilio.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">EdiciónVideo</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark eng">EditingVideo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">EdiciónVideo</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
                             </p>
                         </div>
                     </div>
@@ -1750,20 +1653,16 @@
                                     <div class="col-12 mx-auto">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(179, 21, 0); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop controls>
                                             <source src="/img/onlyfood opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
 
                                     <div class="row mt-3">
                                         <div class="col-12 col-md-6 mb-3 ms-2">
-                                            <h5 class="text-dark esp">Colaboración para el spot de Onlyfood</h5>
-                                            <h5 class="text-dark eng">Collaboration for the Onlyfood spot</h5>
-                                            <p class="esp">
+                                            <h5 class="text-dark">Colaboración para el spot de Onlyfood</h5>
+                                            <p>
                                                 Spot publicitario para empresa de reparto de comida a domicilio. Edición, etalonaje y montaje de video y audio con grafismos. 
-                                            </p>
-                                            <p class="eng">
-                                                Advertising spot for a food delivery company. Editing, colour grading and editing of video and audio with graphics.
                                             </p>
                                         </div>
                                         <div class="row col-8 col-md-4 mb-3 ms-2">
@@ -1797,14 +1696,14 @@
                                         <div class="col-12 col-md-6 mx-auto">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(179, 21, 0); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/of01 opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
                                         <div class="col-12 col-md-6 mx-auto">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(179, 21, 0); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/of02opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
@@ -1812,14 +1711,8 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <a type="button" class="btn btn-danger" href="https://www.youtube.com/watch?v=UN47ps3dEOM&t=2s" target="_blank">
-                                       <span class="esp">Ver en Youtube</span> 
-                                       <span class="eng">Wacth on Youtube</span> 
-                                    </a>
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span>
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <a type="button" class="btn btn-danger" href="https://www.youtube.com/watch?v=UN47ps3dEOM&t=2s" target="_blank">Ver en Youtube</a>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -1829,19 +1722,15 @@
                 <!-- Button trigger modal Territorios -->
                 <div class="col-12 col-md-3 row m-0 mb-3" >
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#territoriosModal" 
-                        style=" cursor:pointer; background: url('/img/territoriosopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/territoriosopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title esp">Festival Territorios Sevilla</h5>
-                            <h5 class="card-title eng">Territorios Sevilla Festival</h5>
-                            <p class="card-text mb-1 esp">Video resumen de todos los artistas.</p>
-                            <p class="card-text mb-1 eng">Video summary of all the artists.</p>
+                            <h5 class="card-title">Festival Territorios Sevilla</h5>
+                            <p class="card-text mb-1">Video resumen de todos los artistas.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">EdiciónVideo</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark eng">EditingVideo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">EdiciónVideo</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
                             </p>
                         </div>
                     </div>
@@ -1860,20 +1749,16 @@
                                     <div class="col-12 mx-auto">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(255, 137, 3); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop controls>
                                             <source src="/img/TERRITORIOS SEVILLA 2013 opt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
 
                                     <div class="row mt-3">
                                         <div class="col-12 col-md-6 mb-3 ms-2">
-                                            <h5 class="text-dark esp">Colaboración con el Festival Territorios Sevilla</h5>
-                                            <h5 class="text-dark eng">Collaboration with the Territorios Sevilla Festival</h5>
-                                            <p class="esp">
+                                            <h5 class="text-dark">Colaboración con el Festival Territorios Sevilla</h5>
+                                            <p>
                                                 Video resumen del festival con todos los artistas presentes. Edición, etalonaje y montaje de video y audio con grafismos. 
-                                            </p>
-                                            <p class="eng">
-                                                Video summary of the festival with all the artists present. Editing, colour grading and editing of video and audio with graphics.
                                             </p>
                                         </div>
                                         <div class="row col-8 col-md-4 mb-3 ms-2">
@@ -1907,28 +1792,22 @@
                                         <div class="col-12 col-md-6 mx-auto">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(255, 137, 3); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/fatboy opt.mov" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
                                         <div class="col-12 col-md-6 mx-auto">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(255, 137, 3); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/publico opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <a type="button" class="btn btn-warning" href="https://www.youtube.com/watch?v=HwANZBDkx74" target="_blank">
-                                        <span class="esp">Ver en Youtube</span> 
-                                        <span class="esp">Wacth on Youtube</span> 
-                                    </a>
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                        <span class="esp">Cerrar</span>
-                                        <span class="eng">Close</span>
-                                    </button>
+                                    <a type="button" class="btn btn-warning" href="https://www.youtube.com/watch?v=HwANZBDkx74" target="_blank">Ver en Youtube</a>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -1938,17 +1817,14 @@
                 <!-- Button trigger modal FCH -->
                 <div class="col-12 col-md-3 row m-0 mb-3" >
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#FCHModal" 
-                        style=" cursor:pointer; background: url('/img/festivalHuelvaopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/festivalHuelvaopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title esp">Festival de Cine Iberoamericano</h5>
-                            <h5 class="card-title eng">Ibero-American Film Festival</h5>
-                            <p class="card-text mb-1 esp">Proyeccciones de las diferentes secciones de premios de la gala.</p>
-                            <p class="card-text mb-1 eng">Screenings of the different award sections of the gala.</p>
+                            <h5 class="card-title">Festival de Cine Iberoamericano</h5>
+                            <p class="card-text mb-1">Proyeccciones de las diferentes secciones de premios de la gala.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
                             </p>
                         </div>
                     </div>
@@ -1958,8 +1834,7 @@
                             <div class="modal-content" style="background: rgba(0, 18, 20, 0.7); backdrop-filter: blur(10px); border-bottom:3px solid rgba(0, 0, 0, 0.9); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2); border-radius: 10px;">
                                 <div class="modal-header" style="border: 0;">
                                     <h5 class="modal-title text-white" id="FCHModalLabel">
-                                       <span class="esp">Festival de Cine Iberoamericano</span> 
-                                       <span class="eng">Ibero-American Film Festival</span> 
+                                        Festival de Cine Iberoamericano
                                         <small class="text-dark"></small></h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
@@ -1968,20 +1843,17 @@
                                     <div class="col-12 mx-auto">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop controls>
                                             <source src="/img/Festival de Huelvaopt.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
                                     <div class="row mt-3">
                                         <div class="col-12 col-md-6 mb-3 ms-2">
-                                            <h5 class="text-primary esp">Colaboración con el Festival de Cine Iberoamericano de Huelva</h5>
-                                            <h5 class="text-primary eng">Collaboration with the Huelva Ibero-American Film Festival</h5>
-                                            <p class="esp">
+                                            <h5 class="text-primary">Colaboración con el Festival de Cine Iberoamericano de Huelva</h5>
+                                            <p>
                                                 Creación de entradilla evento y de las diferentes secciones de premios del evento. 
                                             </p>
-                                            <p class="eng">
-                                                Creation of the event entrance and the different prize sections of the event. 
-                                            </p>
+                                            
                                         </div>
                                         <div class="row col-8 col-md-4 mb-3 ms-2">
 
@@ -2017,13 +1889,13 @@
                                             <div class="col-12 mx-auto mb-3">
                                                 <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop controls>
                                                     <source src="/img/PremioCiudadDeHuelva opt.mp4" type="video/mp4">
-                                                    Your browser does not support this video format.
+                                                    Tu navegador no soporta este formato de video.
                                                 </video>
                                             </div>
                                             <div class="col-12 mx-auto mb-3">
                                                 <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop controls>
                                                     <source src="/img/seccionOficialLargomertajes opt.mp4" type="video/mp4">
-                                                    Your browser does not support this video format.
+                                                    Tu navegador no soporta este formato de video.
                                                 </video>
                                             </div>
                                         </div>
@@ -2032,10 +1904,7 @@
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
                                     <a type="button" class="btn btn-primary" href="https://youtube.com/playlist?list=PL84AeydtzOy6bNmsdZYQW45cYWM8DZXp9" target="_blank">Ver en Youtube</a>
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2045,18 +1914,15 @@
                 <!-- Button trigger modal Pycones -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#pyconesModal" 
-                        style=" cursor:pointer; background: url('/img/pyconesopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/pyconesopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">PyConES</h5>
-                            <p class="card-text mb-1 esp">Conferecias Python España</p>
-                            <p class="card-text mb-1 eng">Python Spain Conference</p>
+                            <p class="card-text mb-1">Conferecias Python España</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">EdiciónVideo</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark eng">EditingVideo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">EdiciónVideo</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
                             </p>
                         </div>
                     </div>
@@ -2075,20 +1941,16 @@
                                     <div class="col-12 mx-auto">
                                         <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop controls>
                                             <source src="/img/entrada PyConES.mp4" type="video/mp4">
-                                            Your browser does not support this video format.
+                                            Tu navegador no soporta este formato de video.
                                         </video>
                                         
                                     </div>
 
                                     <div class="row mt-3">
                                         <div class="col-12 col-md-6 mb-3 ms-2">
-                                            <h5 class="text-primary esp">Colaboración con la Conferencia PyConES</h5>
-                                            <h5 class="text-primary eng">Collaboration with the PyConES Conference</h5>
-                                            <p class="esp">
+                                            <h5 class="text-primary">Colaboración con la Conferencia PyConES</h5>
+                                            <p>
                                                 Creación de entradilla evento, grabación y edición de diferentes conferencias del evento. Montaje de video y audio con grafismos. 
-                                            </p>
-                                            <p class="eng">
-                                                Creation of the event entrance, recording and editing of the different conferences of the event. Video and audio editing with graphics.
                                             </p>
                                         </div>
                                         <div class="row col-8 col-md-4 mb-3 ms-2">
@@ -2119,14 +1981,8 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <a type="button" class="btn btn-primary" href="https://www.youtube.com/watch?v=WG8s0e3MtxU&list=PLahUDl6AAwrjN_L2TtIC6e4tXqC7SJkva" target="_blank">
-                                       <span class="esp">Ver en Youtube</span>
-                                       <span class="eng">Wacth on Youtube</span> 
-                                    </a>
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span>
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <a type="button" class="btn btn-primary" href="https://www.youtube.com/watch?v=WG8s0e3MtxU&list=PLahUDl6AAwrjN_L2TtIC6e4tXqC7SJkva" target="_blank">Ver en Youtube</a>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2136,18 +1992,15 @@
                 <!-- Button trigger modal sherlock -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#sherlockModal" 
-                        style=" cursor:pointer; background: url('/img/sherlock02opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/sherlock02opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title esp">Proyecto Sherlock (Repsol)</h5>
-                            <h5 class="card-title eng">Sherlock Project (Repsol)</h5>
+                            <h5 class="card-title">Proyecto Sherlock (Repsol)</h5>
                             <p class="card-text mb-1">Creación de logotipo para proyecto de marca.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">IdentidadCorporativa</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Logotipo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">CorporateIdentity</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Logo</small>
+                                <small class="bg-light p-1 rounded text-dark">IdentidadCorporativa</small>
+                                <small class="bg-light p-1 rounded text-dark">Logotipo</small>
                             </p>
                         </div>
                     </div>
@@ -2164,18 +2017,12 @@
                                 <div class="modal-body text-dark">
                                     
                                     <div class="row mb-5 px-5">
-                                        <div class="col-12 col-md-6 mx-auto my-auto">
-                                            <h5 class="text-primary esp">
+                                        <div class="col-12 col-md-6 mx-auto my-auto ">
+                                            <h5 class="text-primary">
                                                 Proyecto Sherlock (Repsol)
                                             </h5>
-                                            <h5 class="text-primary eng">
-                                                Sherlock Project (Repsol)
-                                            </h5>
-                                            <p class="esp">
+                                            <p>
                                                 Creación de logotipo para proyecto de marca. Proyecto basado en el análisis del manto superior de la tierra para poder deducir los materiales que hay en mantos inferiores.
-                                            </p>
-                                            <p class="eng">
-                                                Creation of a logo for a branding project. Project based on the analysis of the upper mantle of the earth to be able to deduce the materials that are in lower mantles.
                                             </p>
                                             <div class="row col-12 col-md-6 mb-3 ms-2">
 
@@ -2200,7 +2047,7 @@
                                         <img decoding="async"
                                             width="500" 
                                             alt="" 
-                                            class="col-12 col-md-6 mx-auto p-0"  
+                                            class="col-12 col-md-6 mx-auto p-0 "  
                                             src="/img/boceto5-2.png">
                                     </div>
 
@@ -2226,10 +2073,7 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2239,13 +2083,12 @@
                 <!-- Button trigger modal collar -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#collarModal" 
-                        style=" cursor:pointer; background: url('/img/Safari-Browser-Template-blurred-background-10opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/Safari-Browser-Template-blurred-background-10opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">CollarFit</h5>
-                            <p class="card-text mb-1 esp">Tienda online de productos deportivos.</p>
-                            <p class="card-text mb-1 eng">Online shop for sporting goods.</p>
+                            <p class="card-text mb-1">Tienda online de productos deportivos.</p>
                             <p style="line-height: 32px;">
                                 <small class="bg-light p-1 rounded text-dark">Wordpress</small>
                                 <small class="bg-light p-1 rounded text-dark">CSS</small>
@@ -2267,25 +2110,15 @@
                                     <div class="row mb-5">
                                     
                                         <div class="col-12 col-md-6 ps-md-5 mb-3" style="align-self: center;">
-                                            <h5 class="text-primary">
-                                                <b class="esp">Tienda online de productos deportivos</b>
-                                                <b class="eng">Online shop for sporting goods</b>
-                                            </h5>
-                                            <p class="esp">
+                                            <h5 class="text-primary"><b>Tienda online de productos deportivos</b></h5>
+                                            <p>
                                                 Una página web corporativa creada con Wordpress, personalizada con código CSS y adaptado a la línea visual del cliente.
                                             </p>
-                                            <p class="eng">
-                                                A corporate website created with Wordpress, customised with CSS code and adapted to the client's visual line.
-                                            </p>
-                                            <p class="esp">
+                                            <p>
                                                 · Wordpress básico</br>
                                                 · CSS personalizado</br>
                                                 · Manejo de plugins premium</br>
-                                            </p> 
-                                            <p class="eng">
-                                                · Wordpress basic</br>
-                                                · Custom CSS</br>
-                                                · Management of premium plugins</br>
+                                                
                                             </p> 
                                             <div class="row col-8 col-md-8 mb-3 ms-2">
     
@@ -2318,7 +2151,7 @@
                                             <img decoding="async"
                                             width="500" 
                                             alt="" 
-                                            class="" 
+                                            class=" " 
                                             style="width: 100%; height: auto; border-radius: 10px;box-shadow: 0px 5px 10px 5px rgba(0, 0, 55, 0.2);" 
                                             src="/img/Safari-Browser-Template-blurred-background-10.jpg">
                                         </div>
@@ -2345,10 +2178,7 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2358,18 +2188,15 @@
                 <!-- Button trigger modal a77 -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#a77Modal" 
-                        style=" cursor:pointer; background: url('/img/Clothing-Tag-Mockup.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/Clothing-Tag-Mockup.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">Alma del 77</h5>
-                            <p class="card-text mb-1 esp">Creación de logotipo de marca de moda.</p>
-                            <p class="card-text mb-1 eng">Creation of a fashion brand logo.</p>
+                            <p class="card-text mb-1">Creación de logotipo de marca de moda.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">IdentidadCorporativa</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Logotipo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">CorporateIdentity</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Logo</small>
+                                <small class="bg-light p-1 rounded text-dark">IdentidadCorporativa</small>
+                                <small class="bg-light p-1 rounded text-dark">Logotipo</small>
                             </p>
                         </div>
                     </div>
@@ -2386,15 +2213,12 @@
                                 <div class="modal-body text-white">
                                     
                                     <div class="row mb-5 px-5">
-                                        <div class="col-12 col-md-6 mx-auto my-auto">
+                                        <div class="col-12 col-md-6 mx-auto my-auto ">
                                             <h5 class="text-white">
                                                 Alma del 77
                                             </h5>
-                                            <p class="esp">
+                                            <p>
                                                 Logotipo para línea de moda de una marca muy personal que reflejara sensualidad y lujo a partes iguales.
-                                            </p>
-                                            <p class="eng">
-                                                Logo for a fashion line of a very personal brand that reflects sensuality and luxury in equal parts.
                                             </p>
                                             <div class="row col-12 col-md-6 mb-3 ms-2">
 
@@ -2419,7 +2243,7 @@
                                         <img decoding="async"
                                             width="500" 
                                             alt="" 
-                                            class="col-12 col-md-6 mx-auto p-0"  
+                                            class="col-12 col-md-6 mx-auto p-0 "  
                                             src="/img/a77-4.png">
                                     </div>
 
@@ -2445,10 +2269,7 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2458,18 +2279,15 @@
                 <!-- Button trigger modal goah -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#goahModal" 
-                        style=" cursor:pointer; background: url('/img/antiox\ opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/antiox\ opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">Goah Clinic</h5>
-                            <p class="card-text mb-1 esp">Publicidad e imagen de línea de productos.</p>
-                            <p class="card-text mb-1 eng">Advertising and product line image.</p>
+                            <p class="card-text mb-1">Publicidad e imagen de línea de productos.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">Animación</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Fotomontaje</small>
-                                <small class="bg-light p-1 rounded text-dark eng">MotionGraphics</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Photomontage</small>
+                                <small class="bg-light p-1 rounded text-dark">MotionGraphics</small>
+                                <small class="bg-light p-1 rounded text-dark">Fotomontaje</small>
                             </p>
                         </div>
                     </div>
@@ -2492,17 +2310,11 @@
                                             alt="" 
                                             class="col-8 col-md-6 mb-3"  
                                             src="/img/logo-1.png">
-                                            <h5 class="text-white esp">
+                                            <h5 class="text-white">
                                                 Publicidad e imagen de línea de productos
                                             </h5>
-                                            <h5 class="text-white eng">
-                                                Advertising and product line image
-                                            </h5>
-                                            <p class="esp">
+                                            <p>
                                                 Creación de distintas imágenes y vídeos para redes sociales y promocionar esta línea de productos de la marca.
-                                            </p>
-                                            <p class="eng">
-                                                Creation of different images and videos for social networks to promote this product line of the brand.
                                             </p>
                                             <div class="row col-12 col-md-6 mb-3 ms-2">
 
@@ -2527,7 +2339,7 @@
                                         <div class="col-12 col-md-6">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/goahclinic opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
@@ -2566,7 +2378,7 @@
                                         <div class="col-12 col-md-10 mx-auto mb-3">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/detox opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
@@ -2575,7 +2387,7 @@
                                         <div class="col-12 col-md-10 mx-auto mb-3">
                                             <video width="640" class="responsive" style="width: 100%; height: auto; border-radius: 8px;border-bottom:3px solid rgb(88, 88, 88); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
                                                 <source src="/img/lluvia opt.mp4" type="video/mp4">
-                                                Your browser does not support this video format.
+                                                Tu navegador no soporta este formato de video.
                                             </video>
                                             
                                         </div>
@@ -2590,10 +2402,7 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2603,18 +2412,15 @@
                 <!-- Button trigger modal cp -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#cpModal" 
-                        style=" cursor:pointer; background: url('/img/circo_pric14eopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/circo_pric14eopt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
-                            <h5 class="card-title esp">Teatro Circo Price</h5>
-                            <h5 class="card-title eng">Circo Price Theatre</h5>
-                            <p class="card-text mb-1 esp">Póster promocional para evento en el Circo Price Madrid.</p>
-                            <p class="card-text mb-1 eng">Promotional poster for event at Circo Price Madrid.</p>
+                            <h5 class="card-title">Teatro Circo Price</h5>
+                            <p class="card-text mb-1">Póster promocional para evento en el Circo Price Madrid.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark">Poster</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Fotomontaje</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Photomontage</small>
+                                <small class="bg-light p-1 rounded text-dark">Póster</small>
+                                <small class="bg-light p-1 rounded text-dark">Fotomontaje</small>
                             </p>
                         </div>
                     </div>
@@ -2638,17 +2444,11 @@
                                             class="col-4 col-md-4 mb-3"  
                                             src="/img/logo_price_blanco_0.png">
 
-                                            <h5 class="text-white esp">
+                                            <h5 class="text-white">
                                                 Teatro Circo Price
                                             </h5>
-                                            <h5 class="text-white eng">
-                                                Circo Price Theatre
-                                            </h5>
-                                            <p class="esp">
+                                            <p>
                                                 Póster promocional para evento concreto en el Circo Price Madrid, fotomontaje de siluetas creadas de manera vectorial.
-                                            </p>
-                                            <p class="eng">
-                                                Promotional poster for a specific event at Circo Price Madrid, photomontage of silhouettes created in a vectorial way.
                                             </p>
                                             <div class="row col-12 col-md-6 mb-3 ms-2">
 
@@ -2670,11 +2470,11 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="col-12 col-md-5 mx-auto">
+                                        <div class="col-12 col-md-5 mx-auto ">
                                             <img decoding="async"
                                             width="500" 
                                             alt="" 
-                                            class="p-0"
+                                            class="p-0 "
                                             style="width: 100%; height: auto; border-radius: 10px;"  
                                             src="/img/circo_price.jpg">
                                         </div>
@@ -2693,10 +2493,7 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2706,18 +2503,15 @@
                 <!-- Button trigger modal dr -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#drModal" 
-                        style=" cursor:pointer; background: url('/img/Window\ mockup\ 25\ 09opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/Window\ mockup\ 25\ 09opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">DinamicRoom</h5>
-                            <p class="card-text mb-1 esp">Logotipo para programa de radio de música electrónica.</p>
-                            <p class="card-text mb-1 eng">Logotype for electronic music radio show.</p>
+                            <p class="card-text mb-1">Logotipo para programa de radio de musica electrónica.</p>
                             <p style="line-height: 32px;">
-                                <small class="bg-light p-1 rounded text-dark esp">IdentidadCorporativa</small>
-                                <small class="bg-light p-1 rounded text-dark esp">Logotipo</small>
-                                <small class="bg-light p-1 rounded text-dark eng">CorporateIdentity</small>
-                                <small class="bg-light p-1 rounded text-dark eng">Logo</small>
+                                <small class="bg-light p-1 rounded text-dark">IdentidadCorporativa</small>
+                                <small class="bg-light p-1 rounded text-dark">Logotipo</small>
                             </p>
                         </div>
                     </div>
@@ -2744,11 +2538,8 @@
                                             <h5 class="text-white">
                                                 DinamicRoom
                                             </h5>
-                                            <p class="esp">
+                                            <p>
                                                 Logotipo para programa de radio de musica electrónica.
-                                            </p>
-                                            <p class="eng">
-                                                Logo for an electronic music radio programme.
                                             </p>
                                             <div class="row col-12 col-md-6 mb-3 ms-2">
 
@@ -2770,12 +2561,12 @@
                                             </div>
                                         </div>
                                         
-                                        <div class="col-6 col-md-3 m-auto">
+                                        <div class="col-6 col-md-3 m-auto ">
                                             <img decoding="async"
                                             width="500" 
                                             alt="" 
-                                            class="p-0"
-                                            style="width: 100%; height: auto;"  
+                                            class="p-0 "
+                                            style="width: 100%; height: auto; "  
                                             src="/img/CompletoNaranjaRojoopt.webp">
                                         </div>
                                         
@@ -2835,10 +2626,7 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2848,13 +2636,12 @@
                 <!-- Button trigger modal unete -->
                 <div class="col-12 col-md-3 row m-0 mb-3">
                     <div class="card bg-dark text-white p5"  data-bs-toggle="modal" data-bs-target="#uneteModal" 
-                        style=" cursor:pointer; background: url('/img/unete33opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
+                        style="border-radius:10px; cursor:pointer; background: url('/img/unete33opt.webp');background-blend-mode: soft-light; background-size: cover;background-position: center;">
                         
                            
                         <div class="p-2 pt-5 mt-auto">
                             <h5 class="card-title">Únete Comercio Inteligente</h5>
-                            <p class="card-text mb-1 esp">Web creada para la interactuacción entre usuarios.</p>
-                            <p class="card-text mb-1 eng">Web created for interaction between users.</p>
+                            <p class="card-text mb-1">Web creada para la interactuacción entre usuarios.</p>
                             <p style="line-height: 32px;">
                                 <small class="bg-light p-1 rounded text-dark">Wordpress</small>
                                 <small class="bg-light p-1 rounded text-dark">CSS</small>
@@ -2877,21 +2664,14 @@
                                     
                                         <div class="col-12 col-md-6 ps-md-5 mb-3" style="align-self: center;">
                                             <h5 class="text-primary"><b>Únete Comercio Inteligente</b></h5>
-                                            <p class="esp">
-                                                Web creada en Wordpress para la interactuación entre empresas y fomentar la conexión entre ellas.
+                                            <p>
+                                                Web creada en Wordpress para la interactuacción entre empresas y fomentar la conexión entre ellas.
                                             </p>
-                                            <p class="eng">
-                                                Web created in Wordpress for the interaction between companies and to promote the connection between them.
-                                            </p>
-                                            <p class="esp">
+                                            <p>
                                                 · Wordpress básico</br>
                                                 · CSS personalizado</br>
                                                 · Manejo de plugins premium</br>
-                                            </p>
-                                            <p class="eng">
-                                                · Wordpress basic</br>
-                                                · Custom CSS</br>
-                                                · Management of premium plugins</br>
+                                                
                                             </p> 
                                             <div class="row col-8 col-md-8 mb-3 ms-2">
     
@@ -2924,7 +2704,7 @@
                                             <img decoding="async"
                                             width="500" 
                                             alt="" 
-                                            class="" 
+                                            class=" " 
                                             style="width: 100%; height: auto; border-radius: 10px;box-shadow: 0px 5px 10px 5px rgba(0, 0, 55, 0.2);" 
                                             src="/img/unete.jpg">
                                         </div>
@@ -2961,10 +2741,7 @@
                                     
                                 </div>
                                 <div class="modal-footer" style="border: 0;">
-                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
-                                       <span class="esp">Cerrar</span> 
-                                       <span class="eng">Close</span> 
-                                    </button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </div>
                         </div>
@@ -2985,15 +2762,18 @@
             </div>
         </section>
         <!-- Footer -->
-        <nav class="navbar p-3">
+        <nav class="navbar fixed-bottom navbar-light p-3"  style="background: rgba(255,255,255,0.6);backdrop-filter: blur(5px); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.1);">
             <div class="container-fluid">
-              <p class="nav-item mb-1"><a class="btn btn-outline-primary text-primary"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a></p>
+              <p class="nav-item mb-1"><a class="btn text-primary"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a></p>
               <p class="nav-item ms-auto mb-1">Pablo Castelló 2023</p>
             </div>
         </nav>
 
         <!-- Bootstrap Bundle -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        <script src="language.js"></script>
+        <script>
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        </script>
     </body>
 </html>

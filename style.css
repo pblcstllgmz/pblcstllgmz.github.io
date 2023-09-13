@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;800&family=Teko&display=swap');
+
+h1, h2, h3{
+    font-family: 'Bitter', serif;
+}
+
+html, p, h4, h5{
+  font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    padding: 10px;
+    background-color: #ddd;
+}
+.arrow-slide {
+    animation: slide 3s infinite ease-in-out;
+}
+nav, section{
+    max-width: 1200px;
+    margin: 5px auto 0 auto;
+    border-radius: 20px;
+}
+.card{
+    border-radius: 20px;
+}
+@keyframes slide {
+    0%{ margin-top: 0;}
+    50% {margin-top: 20px;}
+    100% {margin-top: 0;}
+}
+
+.subtitulo{
+    font-size: 50px; 
+    letter-spacing: 2px;
+}
+
+
+.slick-slide { margin: 0px 20px; }
+
+.slick-slide img { width: 100%; }
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+.tachar {
+    position: relative;
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    }
+
+    .tachar:before, span:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #000;
+    }
+
+    .tachar:before {
+    left: -2.5px;
+    }
+    .tachar:after {
+    right: 2.5px;
+    background: #000;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .tachar:hover:before {
+    background: #000;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .tachar:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+    }
+
+    .banner {
+        background: linear-gradient(322deg, #009c53, #5500c4, #009c53);
+        background-size: 200% 200%;
+
+        -webkit-animation: AnimationName 22s ease infinite;
+        -moz-animation: AnimationName 22s ease infinite;
+        -o-animation: AnimationName 22s ease infinite;
+        animation: AnimationName 22s ease infinite;
+    }
+
+    .bg-dark{
+        box-shadow: 0 0px 0px rgba(0,0,0,0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .bg-dark:hover{
+        box-shadow: 0 8px 10px rgba(0,0,0,0.7);
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    @-webkit-keyframes AnimationName {
+        0%{background-position:7% 0%}
+        50%{background-position:94% 100%}
+        100%{background-position:7% 0%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:7% 0%}
+        50%{background-position:94% 100%}
+        100%{background-position:7% 0%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:7% 0%}
+        50%{background-position:94% 100%}
+        100%{background-position:7% 0%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:7% 0%}
+        50%{background-position:94% 100%}
+        100%{background-position:7% 0%}
+    }
+
+
+
+@media (max-width: 600px) {
+    .subtitulo{
+    font-size: 35px; 
+    }
+}

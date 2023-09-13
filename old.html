@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <title>Pablo Castelló - Diseño Gráfico</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
+        <!-- Estilos -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300');
+            @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;800&family=Teko&display=swap');
+
+            h1, h2, h3{
+                font-family: 'Bitter', serif;
+            }
+
+            html, p, h4, h5{
+              font-family: 'Roboto', sans-serif;
+            }
+            html, body{
+                margin: 0;
+                overflow-x: hidden;
+            }
+            .arrow-slide {
+                animation: slide 3s infinite ease-in-out;
+            }
+
+            @keyframes slide {
+                0%{ margin-top: 0;}
+                50% {margin-top: 20px;}
+                100% {margin-top: 0;}
+            }
+
+            .subtitulo{
+                font-size: 50px; 
+                letter-spacing: 2px;
+            }
+
+            @media (max-width: 600px) {
+                .subtitulo{
+                font-size: 35px; 
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        
+
+        <!-- Section -->
+        <section class="px-3" style="background-image:url(img/bg_banner.webp);background-position: center; background-size: cover; ">
+            <!-- Nav -->
+            <nav class="navbar navbar-expand-lg rounded" >
+                <div class="container-fluid">
+                    <!-- Logo -->
+                    <a class="navbar-brand mx-auto" href="index.html">
+                        <img src="/img/logo.gif" width="30" alt="">
+                    </a>
+                    <!-- Toggler -->
+                    <button class="d-none navbar-toggler" style="border:0;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- Menu -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="d-none navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="portfolio.html">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contacto</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </nav>
+
+            <!-- contactoModal -->
+            <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
+                <div class="modal-dialog" >
+                    <div class="modal-content px-4" style="background-color: rgba(255,255,255,0.9);backdrop-filter: blur(10px);border-bottom:2px solid rgb(172, 172, 172); box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2); border-radius: 10px;">
+                        <div class="modal-header" style="border: 0;">
+                            <h5 class="modal-title text-secondary" id="contactoModalLabel">Contacto</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body px-4 py-0">
+                            <div>
+                                <a href="mailto:pblcstllgmz@gmail.com" class="btn btn-primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                                      </svg>
+                                    pblcstllgmz@gmail.com
+                                </a>
+                                <a href="https://discord.gg/pvkXw3hyJr" class="btn btn-dark">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                                        <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                                      </svg>
+                                   Discord
+                                </a>
+                            </div>
+                            <div class="card bg-danger my-3">
+                                <div class="card-body text-white">
+                                    <h5>¡No enviar publicidad!</h5>
+                                  <p class="card-text"><small>* Estas apunto de enviar un correo electrónico a una dirección de email que pertenece a la <a href="https://www.listarobinson.es/" target="_blank" class="text-dark"><b>Lista Robinson</b></a>. </small></p>
+                                  
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="modal-footer" style="border: 0;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <video width="1684" class="responsive mt-auto bg"  
+            style="position: absolute; width: 1600px; height: auto; overflow-x: hidden; top:0; left: 0;"
+            poster="/img/BG.webp" autoplay muted loop>
+                <source src="/img/BG.webm" type="video/webm">
+                Tu navegador no soporta este formato de video.
+            </video>
+            <video width="1200" class="responsive mt-auto bg"  
+            style="position: absolute; width: 1200px; height: auto; overflow-x: hidden; top:0; left: 0;"
+            poster="/img/textBG.webp" autoplay muted loop>
+                <source src="/img/textBG.webm" type="video/webm">
+                Tu navegador no soporta este formato de video.
+            </video>
+
+            <!-- Banner -->
+            <div class="mt-4 mt-lg-0" >
+                <div class="row text-white col-12 col-md-10 mx-auto" style="align-items: center; position: relative;">
+                    
+                    <div class="col-10 col-lg-6 mx-auto" style="top: -150px;">
+                        
+                        <div class="container p-0" style="z-index: 2;">
+                            <div class="text-white col">
+                                <p class=""><small>Diseño Web, Motion Graphics e Ilustración</small></p>
+                            </div>
+                            <h2 class="subtitulo">
+                                <b>Eleva la imagen de tu empresa al siguiente nivel</b>  
+                             </h2>
+                             <p>
+                                 <a href="portfolio.html" class="btn btn-primary">Ver Portfolio</a>
+                                 <a class="btn btn-outline-light"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a>
+         
+                             </p>
+                        </div>     
+                        
+                    </div>
+                    <div class="col-12 col-lg-6 mt-auto">
+                        <video width="640" class="responsive mt-auto"  
+                            style="width: 100%; height: auto;display: block;"
+                            poster="/img/pablo1.webp" autoplay muted loop>
+                            <source src="/img/pablo.02.webm" type="video/webm">
+                            Tu navegador no soporta este formato de video.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+                
+        </section>
+
+        <!-- Section artDirection -->
+        <section id="artDirection" class="p-0 text-white d-flex align-items-center" 
+        style="background-color: #222; min-height: 80vh; background: url('/img/mosaicoopt.webp');background-position: center; background-attachment: fixed;">
+          
+
+            <div class="row container m-auto">
+                <div class="col-12 col-md-6 col-xl-8 order-1 order-md-0 text-center m-auto" style="align-self: center;">
+                    <h6><small>Diseño gráfico</small></h6>
+                    <h2 class="text-primary">Dirección de arte</h2>
+                    <p>Creación y adaptación de estilos gráficos para identidades corporativas. Diseño y rediseño de logotipos, material corporativo, maquetación de material impreso y digital. Análisis e investigación sobre cualquier proyecto gráfico.</p>
+                    <p>
+                        <a href="portfolio.html" class="btn btn-primary">Ver Portfolio</a>
+                        <a class="btn text-primary"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a>
+
+                    </p>
+                </div>
+                <div class="d-none col-12 col-md-6 col-xl-4 order-0 order-md-1 m-auto text-center">
+                    <video width="640" class="p-0 mb-3" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0px 3px 10px 5px rgba(0,0,0,0.2);" autoplay muted loop>
+                        <source src="/img/bombillas.mp4" type="video/mp4">
+                        Tu navegador no soporta este formato de video.
+                    </video>
+                                    
+                </div>
+            </div>
+
+           
+        </section>
+
+       
+
+        <!-- Section 3D -->
+        <section id="3d" class="p-5 text-white d-flex align-items-center" style="background: linear-gradient(180deg,   rgb(58, 19, 83) 0%, rgb(0, 0, 0) 75%);">
+            <div class="row container m-auto">
+                <div class="col-12 col-md-6 order-1 order-md-0" style="align-self: center;">
+                    <video width="640" class="responsive mt-auto"  
+                            style="width: 100%; height: auto;display: block;"
+                            poster="/img/monoPoster.webp" autoplay muted loop>
+                            <source src="/img/mono.webm" type="video/webm">
+                            Tu navegador no soporta este formato de video.
+                        </video>
+                    
+                </div>
+                <div class="col-12 col-md-6 order-0 order-md-1" style="align-self: center;">
+                    <h6>
+                        <small class="row">
+                            <div class="col-1">
+                                <img decoding="async" width="35" alt="" class="" src="/img/blender.ico">
+                            </div>
+                            <div class="col pl-2" style="align-self: center;">
+                                <p class="m-0 p-0 ps-3 ps-md-0">.vrm, .psk, .fbx y más</p>
+                            </div>
+                            
+                    
+                        </small>
+                    </h6>
+                    <h2 class="text-primary">Diseño de caracteres 3D</h2>
+                    <p>Creación de avatares, personajes para videojuegos o animaciones para vídeo. Caracteres 3D con rig completo (esqueleto), expresiones faciales (Shape keys), texturas optimizadas, y todos los archivos editables.</p>
+                    
+                    <p>
+                        <a href="#" class="btn btn-primary disabled">Próximamente</a>
+                    </p>             
+                </div>
+            </div>
+        </section>
+
+
+
+        
+
+        <!-- Section Clientes -->
+        <section class="p-5 text-center" style="background: linear-gradient(180deg, rgb(0, 0, 0) 0%,  rgb(20, 20, 20) 100%);">
+            <p class="mt-5 pt-5 text-center text-light">
+                Clientes
+            </p>
+            <h5 class="text-center text-light mb-4">
+                Algunas empresas que contrataron mis servicios
+            </h5>
+            <div class="row container m-auto col-12 col-md-6 pb-3">
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/Warner_Bros_logo.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/nhHotelsBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/repsol-logo.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/festivalHuelvaBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-4 col-md-2  m-auto">
+                    <img src="/img/squadM.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/h28blanco.png" style="width:100%; " alt="">                
+                </div>
+            </div>    
+            <div class="row container m-auto col-12 col-md-6 pb-3">
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/uthorpLogoBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="https://www.wiccon.es/wp-content/uploads/2019/06/logoBlanco3.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/cervezaDamasBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/patriciaGarciaBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/pyconesBlanco.png" style="width:100%; " alt="">               
+                </div>
+               
+            </div>
+            <div class="row container m-auto col-12 col-md-6 pb-3 ">
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/goahBlanco.png" style="width:100%; " alt="">               
+                </div>
+                <div class="col-4 col-md-2  m-auto p-3">
+                    <img src="/img/logoClinicaDentalBlanco.png" style="width:100%; " alt="">                
+                </div>
+                
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/motivaBlanco.png" style="width:100%; " alt="">                
+                </div>
+                <div class="col-4 col-md-2 m-auto p-3 p-md-4">
+                    <img src="/img/escritorTatuado_logoPlano.png" style="width:100%; " alt="">                
+                </div>
+                
+                <div class="col-4 col-md-2 m-auto p-3 p-md-4">
+                    <img src="/img/SimboloBlanco.png" style="width:100%; " alt="">                
+                </div>
+
+                <div class="col-4 col-md-2 m-auto">
+                    <img src="/img/eyoileBlanco.png" style="width:100%; " alt="">                
+                </div>
+                
+                
+            </div>
+            <div>
+                <div class="row mt-5 container m-auto col-12 col-md-5">
+                    <div class="col-4 col-sm-3 col-md-4 my-auto ms-auto">
+                        <img src="/img/PCG.png" style="width:100%; max-width:105px; " alt="">                
+                    </div>
+                    <div class="col-8 col-sm-6 col-md-8 my-auto me-auto text-start pb-3" style="border-left: solid 1px black;">
+                        <p class="mb-0 text-light">
+                                <b>Pablo Castelló</b> </br>
+                                Diseñador gráfico · 2023 </br>
+                                <a href="portfolio.html" class="btn btn-sm btn-dark mb-1">Ver Portfolio</a>
+                                <a class="btn btn-sm btn-dark mb-1"  data-bs-toggle="modal" data-bs-target="#contactoModal"  href="#">Contactar</a>
+
+                        </p>
+                    </div>
+                </div>
+                
+                <p>
+                    
+                </p>
+            </div>
+        </section>
+
+        <!-- Bootstrap Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        
+
+    </body>
+</html>
